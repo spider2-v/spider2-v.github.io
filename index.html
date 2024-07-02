@@ -107,6 +107,7 @@
             <a clsss="navbar-item" href="https://os-world.github.io/">
               OSWorld
             </a>
+
           </div>
         </div>
       </div>
@@ -313,9 +314,7 @@
       <!-- Data Statistics. -->
       <h2 class="title is-3">Data Statistics and Comparison</h2>
       <md-block>
-        Below we present an overview of the main statistics of **OSWorld**, showcasing the outline and a broad spectrum
-        of tasks. **OSWorld** contains a total of 369 tasks (and an additional 43 tasks on Windows for
-        analysis).</md-block>
+        Below we present an overview of the dataset statistics of **Spider2-V**. It contains a total of 494 tasks across 7 task categories.</md-block>
       <div class="columns is-centered">
         <div class="column" style="margin-right: -5rem;">
           <div class="content has-text-centered">
@@ -324,11 +323,9 @@
               <br />
             <h5>
               Key statistics of
-              <b>OSWorld</b>.<br />
+              <b>Spider2-V</b>.<br />
             </h5>
-            The “Supp. tasks” refers to the Windows-based tasks, that could
-            only be used after
-            activation due to copyright restrictions.<br />
+            The “verbose instruction” means a step-by-step guideline on how to complete the task is included.<br />
             </p>
             <img src="static/images/statistics.png" alt="data-overview" style="max-width: 65%;" />
 
@@ -338,21 +335,18 @@
           <div class="content has-text-centered">
             <img src="static/images/pie_chart.png" alt="data-composition" style="max-width: 65%;" />
             <p>
-              Distribution of task instructions in <b>OSWorld</b><br />
-              based on the app domains and operation
-              types to showcase the content intuitively.
+              Distribution of task instructions in <b>Spider2-V</b><br />
+              based on the task categories and professional applications
+              to showcase the content intuitively.
             </p>
           </div>
         </div>
       </div>
-      <md-block>We make a comparison of **OSWorld** against some other different benchmarks for digital agents as
-        presented below. <br>
+      <md-block>We make a comparison of **Spider2-V** against some other different benchmarks for VLM/LLM-based agents. <br>
         **The columns
-        indicate:** whether they provide a controllable executable environment *(Control. Exec. Env.)*, the
-        ease of adding new tasks involving arbitrary applications in open domains *(Environment Scalability)*,
-        support for multimodal agent evaluation *(Multimodal Support)*, support for and inclusion of cross-app
-        tasks *(Cross-App)*, capability to start tasks from an intermediate initial state *(Intermediate Init. State)*,
-        and the number of execution-based evaluation functions *(# Exec.-based Eval. Func.)*.</md-block><br>
+        indicate:** the research field (Field),
+        whether an executable environment is provided (Exec. Env.?), whether enterprise service is utilized
+        (Ent. Serv.?), whether GUI actions are supported (GUI Support?) and some other statistics (e.g., number of involved applications or websites, number of execution-based evaluation functions).</md-block><br>
       <div class="column is-full-width interpolation-panel">
         <div class="columns">
           <div class="column is-one-third">
