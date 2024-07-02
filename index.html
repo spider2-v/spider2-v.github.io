@@ -150,7 +150,7 @@
                 <a href="https://github.com/importpandas">Hongsheng Xu</a><sup>2</sup>,</span>
               <br>
               <span class="author-block">
-                <a href="https://zdy023.github.io/">Danyang Zhang</a><sup>2</sup>,</span>
+                <a href="https://zdy023.github.io/">Danyang Zhang</a><sup>12</sup>,</span>
               <span class="author-block">
                 <a href="https://www.sidaw.xyz/">Sida Wang</a><sup>5</sup>,</span>
               <span class="author-block">
@@ -178,8 +178,8 @@
               <span class="author-block"><sup>1</sup>The University of Hong Kong,</span>
               <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University,</span>
               <span class="author-block"><sup>3</sup>Google Cloud AI Research,</span>
-              <span class="author-block"><sup>4</sup>Google Deepmind,</span>
               <br>
+              <span class="author-block"><sup>4</sup>Google Deepmind,</span>
               <span class="author-block"><sup>5</sup>Meta AI,</span>
               <span class="author-block"><sup>6</sup>Salesforce Research,</span>
               <span class="author-block"><sup>7</sup>Yale University,</span>
@@ -189,36 +189,16 @@
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- PDF Link. -->
-                <!--                <span class="link-block">-->
-                <!--                  <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark">-->
-                <!--                    <span class="icon">-->
-                <!--                      <i class="fas fa-file-pdf"></i>-->
-                <!--                    </span>-->
-                <!--                    <span>Paper</span>-->
-                <!--                  </a>-->
-                <!--                </span>-->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2404.07972" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
                     <span>Paper</span>
                   </a>
                 </span>
-                <!-- Video Link. -->
-                <!--                <span class="link-block">-->
-                <!--                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
-                <!--                    class="external-link button is-normal is-rounded is-dark">-->
-                <!--                    <span class="icon">-->
-                <!--                      <i class="fab fa-youtube"></i>-->
-                <!--                    </span>-->
-                <!--                    <span>Video</span>-->
-                <!--                  </a>-->
-                <!--                </span>-->
-                <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/xlang-ai/OSWorld"
+                  <a href="https://github.com/xlang-ai/Spider2-V"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -228,7 +208,7 @@
                 </span>
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/xlang-ai/OSWorld/tree/main/evaluation_examples"
+                  <a href="https://github.com/xlang-ai/Spider2-V/tree/main/evaluation_examples#evaluation-examples"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="far fa-images"></i>
@@ -246,7 +226,7 @@
                   </a>
                 </span>
                 <!-- Slides Link. -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://docs.google.com/presentation/d/1-r889Nb9n7SeZqrj-ryNqJLoMzp7aGNU2ihO8nUdEcE/edit?usp=sharing"
                     target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -254,9 +234,9 @@
                     </span>
                     <span>Slides</span>
                   </a>
-                </span>
+                </span> -->
                 <!-- Twitter Link. -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://twitter.com/TianbaoX/status/1778781521253667267" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -264,9 +244,9 @@
                     </span>
                     <span>Twitter</span>
                   </a>
-                </span>
+                </span> -->
                 <!-- Discord Link. -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://discord.gg/4Gnw7eTEZR" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -274,7 +254,7 @@
                     </span>
                     <span>Discord</span>
                   </a>
-                </span>
+                </span> -->
 
               </div>
             </div>
@@ -286,16 +266,20 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="column is-full">
-        <video controls muted loop autoplay width="100%">
+        <!-- <video controls muted loop autoplay width="100%">
           <source src="static/videos/main.mp4" type="video/mp4">
-        </video>
+        </video> -->
+        <img src="static/images/overview.png" width="100%" alt="Spider2-V Overview"
+          class="responsive-image">
+        <md-block>
+          Spider2-V is a multimodal agent benchmark spanning across the entire data science and engineering workflow (e.g., four task examples above). It involves various professional enterprise-level applications and includes intensive GUI controls apart from code writing throughout the real-time multi-turn interaction with an executable computer environment.
+        </md-block>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-desktop">
-      <!-- Main Figure. -->
       <h2 class="title is-3"></h2>
       <div class="content has-text-justified">
         <img src="static/images/task_demonstration.png" width="100%" alt="osworld task_demonstration"
@@ -308,9 +292,8 @@
           tasks in **OSWorld** with reliable, reproducible setup and evaluation scripts.
         </md-block>
       </div>
-      <!--/ Main Figure. -->
     </div>
-  </section>
+  </section> -->
 
   <section class="section">
     <div class="container is-max-desktop">
