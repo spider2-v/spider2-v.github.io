@@ -266,34 +266,14 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="column is-full">
-        <!-- <video controls muted loop autoplay width="100%">
-          <source src="static/videos/main.mp4" type="video/mp4">
-        </video> -->
         <img src="static/images/overview.png" width="100%" alt="Spider2-V Overview"
           class="responsive-image">
         <md-block>
-          Spider2-V is a multimodal agent benchmark spanning across the entire data science and engineering workflow (e.g., four task examples above). It involves various professional enterprise-level applications and includes intensive GUI controls apart from code writing throughout the real-time multi-turn interaction with an executable computer environment.
+          **Spider2-V** is a multimodal agent benchmark spanning across the entire data science and engineering workflow (e.g., four task examples above). It involves various professional enterprise-level applications and includes intensive GUI controls apart from code writing throughout the real-time multi-turn interaction with an executable computer environment.
         </md-block>
       </div>
     </div>
   </section>
-
-  <!-- <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3"></h2>
-      <div class="content has-text-justified">
-        <img src="static/images/task_demonstration.png" width="100%" alt="osworld task_demonstration"
-          class="responsive-image">
-        <md-block>
-          **OSWorld** is a first-of-its-kind scalable, real computer environment for multimodal agents,
-          supporting task setup, execution-based evaluation, and interactive learning across operating systems.
-          It can serve as a unified environment for evaluating open-ended computer tasks that involve arbitrary
-          apps (e.g., task examples in the above Fig). We also create a benchmark of 369 real-world computer
-          tasks in **OSWorld** with reliable, reproducible setup and evaluation scripts.
-        </md-block>
-      </div>
-    </div>
-  </section> -->
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -303,29 +283,9 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <md-block>
-              Autonomous agents that accomplish complex computer tasks with minimal human
-              interventions has the potential to transform human-computer interaction, significantly enhancing
-              accessibility and productivity. However, existing benchmarks
-              either lack an interactive environment or are limited to environments specific to
-              certain applications or domains, failing to reflect the diverse and complex nature of real-world computer
-              use, thereby limiting the scope of tasks and agent
-              scalability. To address this issue, we introduce **OSWorld**, the first-of-its-kind
-              scalable, real computer environment for multimodal agents, supporting task setup,
-              execution-based evaluation, and interactive learning across various operating systems such as Ubuntu,
-              Windows, and macOS. **OSWorld** can serve as a unified,
-              integrated computer environment for assessing open-ended computer tasks that
-              involve arbitrary applications. Building upon **OSWorld**, we create a benchmark
-              of 369 computer tasks involving real web and desktop apps in open domains, OS
-              file I/O, and workflows spanning multiple applications. Each task example is
-              derived from real-world computer use cases and includes a detailed initial state
-              setup configuration and a custom execution-based evaluation script for reliable,
-              reproducible evaluation. Extensive evaluation of state-of-the-art LLM/VLM-based
-              agents on **OSWorld** reveals significant deficiencies in their ability to serve as
-              computer assistants. While humans can accomplish over 72.36% of the tasks, the
-              best model achieves only 12.24% success, primarily struggling with GUI grounding
-              and operational knowledge. Comprehensive analysis using **OSWorld** provides
-              valuable insights for developing multimodal generalist agents that were not possible with previous
-              benchmarks.
+              Data science and engineering workflows often span multiple stages, from warehousing to orchestration, using tools like *BigQuery*, *dbt*, and *Airbyte*. As vision language models (VLMs) advance in multimodal understanding and code generation, VLM-based agents could potentially automate these workflows by generating SQL queries, Python code, and GUI operations. This automation can enhance productivity for experts while democratizing access to large-scale data analysis. In this paper, we introduce **Spider2-V**, the first multimodal agent benchmark focusing on professional data science and engineering workflows, featuring *494* real-world tasks in authentic computer environments and incorporating $20$ enterprise-level professional applications.
+              These tasks, derived from real-world use cases, evaluate a multimodal agent's ability to perform data-related tasks by writing code and managing the GUI in enterprise data software systems. To balance realistic simulation with evaluation simplicity, we devote significant effort to developing automatic configurations for task setup and carefully crafting evaluation metrics for each task.
+              Furthermore, we supplement multimodal agents with comprehensive documents of these enterprise data software systems. Our empirical evaluation reveals that existing state-of-the-art LLM/VLM-based agents lag behind a lot in achieving full data workflow automation ($14%$ success). Even with step-by-step guidance, these agents still underperform in tasks that require fine-grained, knowledge-intensive GUI actions ($16.2%$) and involve remote cloud-hosted workspaces ($10.6%$). As the first benchmark of its kind, **Spider2-V** provides easy-to-use evaluation tools and comprehensive insights, paving the way for intelligent multimodal agents to transform data science and engineering workflow automation.
             </md-block>
           </div>
         </div>
