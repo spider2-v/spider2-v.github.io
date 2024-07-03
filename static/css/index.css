@@ -114,6 +114,27 @@ body {
 
 }
 
+.image-container-wrapper {
+  position: relative;
+  max-height: 540px;
+}
+.image-container {
+  max-height: 540px;
+  overflow-y: scroll;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 10;
+}
+
 .responsive-image {
   max-width: 100%;
   height: auto;
