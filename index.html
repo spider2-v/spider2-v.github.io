@@ -39,12 +39,80 @@
   <link rel="stylesheet" href="./stylesheets/layout.css">
   <link rel="stylesheet" href="./stylesheets/index.css">
   <link rel="stylesheet" href="./bowe_componets/css/bootstrap.table.min.css">
-
+    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script> -->
+  <style>
+    pre {
+      max-height: 500px; /* Adjust as needed */
+      overflow: auto;
+    }
+  </style>
+  <style>
+    .highlight-quote {
+      background-color: #f9f9f9; /* Light background color */
+      border-left: 4px solid #007BFF; /* Blue left border */
+      padding: 10px 15px; /* Padding inside the block */
+      margin: 15px 0; /* Margin around the block */
+      color: #333; /* Text color */
+    }
+    .highlight-quote-title {
+      font-weight: bold; /* Bold font for title */
+      margin-top: 0; /* Remove top margin */
+      margin-bottom: 10px; /* Space between title and content */
+      color: #007BFF; /* Same color as the border */
+    }
+    .highlight-quote-content {
+      font-style: italic; /* Italic font style for content */
+    }
+    .highlight-quote-content pre {
+      overflow: auto; /* Ensure the content is scrollable if it's too wide */
+    }
+  </style>
+  <style>
+    .two-column-container {
+      display: flex;
+      gap: 10px; /* Optional: space between columns */
+    }
+    .two-column {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .two-column pre {
+      max-height: 200px;
+      max-width: 100%;
+      overflow: auto; /* Ensure the code block is scrollable if it's too wide */
+      box-sizing: border-box;
+    }
+    .two-column boldtitle {
+      font-weight: bold;
+      font-size: 1.5em; /* Adjust as needed */
+      margin: 10px 0; /* Optional: add some margin */
+    }
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; /* Optional: space between images */
+    }
+    .right-column img {
+      flex: 1;
+      width: 100%;
+      object-fit: cover;
+    }
+</style>
 </head>
 
 <body>
@@ -212,7 +280,7 @@
                   <a href="https://github.com/xlang-ai/Spider2-V/tree/main/evaluation_examples#evaluation-examples"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="fas fa-database"></i>
                     </span>
                     <span>Data</span>
                   </a>
@@ -236,6 +304,15 @@
                     <span>Tool Documents</span>
                   </a>
                 </span>
+                <span class="link-block">
+                  <a href="#leaderboard" class="button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-trophy"></i>
+                    </span>
+                    <span>Leaderboard</span>
+                  </a>
+                </span>
+
                 <!-- Data Viewer. -->
                 <!-- <span class="link-block">
                   <a href="explorer.html" target="_blank" class="external-link button is-normal is-rounded is-dark">
@@ -346,6 +423,356 @@
           - The action space can be 1) pyautogui code, or 2) customized JSON dict.
           - The observation space can be 1) image-style screenshot, and 2) text-format accessibility tree.
         </md-block>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container is-max-desktop">
+
+      <h2 class="title is-3">Task Demonstration</h2>
+      <md-block>
+        We present one task example (with app <code>Airbyte</code> and uuid <code>66936a8e-5cbe-4638-a03a-3ae92eb81e6c</code>) below to showcase:
+        - 1. <code>.json</code> data format;
+        - 2. two types of task intructions (<i>abstract</i> and <i>verbose</i>);
+        - 3. environment setup methods;
+        - 4. video recording and action trajectory to complete the task;
+        - 5. the task-specific evaluation metric.
+      </md-block>
+    </div>
+    <div class="cover" id="contentTask">
+      <!-- Baseline. -->
+      <div class="container-t">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="infoCard">
+              <div class="infoBody">
+                <div class="tabs is-centered example_lst1">
+                  <ul>
+                    <li><a title="Data Format">Data Format</a></li>
+                    <li><a title="Instructions">Instructions</a></li>
+                    <li><a title="Env Setup">Env Setup</a></li>
+                    <li class="is-active"><a title="Action Trajectory">Action Trajectory</a></li>
+                    <li><a title="Evaluation">Evaluation</a></li>
+                  </ul>
+
+                </div>
+                <script type="text/javascript">
+                  document.querySelectorAll(".example_lst1 li").forEach(e => {
+                    e.addEventListener("click", Click_1)
+                  })
+
+                  function Click_1(eve) {
+                    const iTxt = eve.srcElement.innerText
+                    for (let v of document.querySelectorAll(".example_lst1 a")) {
+                      if (iTxt === v.innerText) {
+                        v.parentElement.className = "is-active";
+                      } else {
+                        v.parentElement.className = "";
+                      }
+                    }
+                    for (let block of document.getElementsByClassName('lib_examples')) {
+                      if (block.id.includes("Task")) {
+                        block.style.display = (block.title === iTxt) ? 'block' : 'none';
+                      }
+                    }
+                  }
+
+                </script>
+                <div title="Data Format" class="lib_examples" id="TaskPanel1" style="display: none;">
+                  <!-- <div class="content has-text-justified"> -->
+                  <md-block>
+                    Here is a brief explanation on some critical fields in the <code>.json</code> file (detailed in [Data Format](https://github.com/xlang-ai/Spider2-V/tree/main/evaluation_examples#task-format)):
+
+                    • <code>instruction</code>: the task instruction, user intent, or task goal<br>
+                    • <code>config</code>: a list of functions to initialize or reset the environment in the virtual machine. Each function is represented by a JSON dict, where the <code>type</code> field indicates the function name and the <code>parameters</code> field indicates the parameters of the function<br>
+                    • <code>evaluator</code>: the evaluation function to check the agent's output. Concretely, the <code>func</code> field indicates the function name, the <code>result</code> field indicates how to obtain the predicted result from the agent, and the <code>expected</code> field indicates the golden result of the current task<br>
+                  </md-block>
+                  <pre class="line-numbers" data-language="JSON"><code class="language-json">{
+  "id": "66936a8e-5cbe-4638-a03a-3ae92eb81e6c",
+  "snapshot": "airbyte",
+  "instruction": "I have established a connection from Faker to local .csv file. Could you help me change the running schedule? I hope it can be replicated at 6:00 pm every day.",
+  "source": [
+      "https://docs.airbyte.com/using-airbyte/core-concepts/sync-schedules"
+  ],
+  "related_apps": [
+      "chromium",
+      "airbyte",
+      "docker"
+  ],
+  "tags": [
+      "gui",
+      "data_ingestion_and_integration",
+      "abstract"
+  ],
+  "action_number": 6,
+  "config": [
+      {
+          "type": "copyfile_from_host_to_guest",
+          "parameters": {
+              "src": "evaluation_examples/examples/airbyte/66936a8e-5cbe-4638-a03a-3ae92eb81e6c/connection.json",
+              "dest": "/home/user/connection.json"
+          }
+      },
+      {
+          "type": "script_and_execute",
+          "parameters": {
+              "src": "evaluation_examples/examples/airbyte/66936a8e-5cbe-4638-a03a-3ae92eb81e6c/init.sh",
+              "dest": "/home/user/init.sh"
+          }
+      },
+      {
+          "type": "google_chrome_browser",
+          "parameters": {
+              "debugging_port": 1337,
+              "listening_port": 9222,
+              "urls": [
+                  "https://www.bing.com/"
+              ]
+          }
+      },
+      {
+          "type": "airbyte_webui_init",
+          "parameters": {
+              "listening_port": 9222,
+              "url": "http://localhost:8000",
+              "actions": [
+                  {
+                      "type": "login",
+                      "email": "anonym@gmail.com",
+                      "company": "ANONYM"
+                  }
+              ]
+          }
+      }
+  ],
+  "evaluator": {
+      "postconfig": [],
+      "func": "check_include_exclude",
+      "result": {
+          "type": "vm_script_output",
+          "src": "evaluation_examples/examples/airbyte/66936a8e-5cbe-4638-a03a-3ae92eb81e6c/eval.sh",
+          "dest": "/home/user/eval.sh"
+      },
+      "expected": {
+          "type": "rule",
+          "rules": {
+              "include": [
+                  "succeed"
+              ],
+              "exclude": [
+                  "failed"
+              ]
+          }
+      }
+  },
+  "counterpart": "7657611f-2e32-47a1-89c9-3b887d803bc5"
+}</code></pre>
+                </div>
+
+                <div title="Instructions" class="lib_examples" id="TaskPanel2" style="display: none;">
+                  <!-- <div class="content has-text-justified"> -->
+                  <md-block>
+                    The current task (with app <code>Airbyte</code> and uuid <code>66936a8e-5cbe-4638-a03a-3ae92eb81e6c</code>) has an <mark><i>abstract</i></mark> instruction, which means it only gives a brief or high-level description of the task without stepwise guidance.
+                  </md-block>
+                  <div class="highlight-quote">
+                    <h3 class="highlight-quote-title">Abstract Instruction</h3>
+                    <div class="highlight-quote-content">
+                    
+                    I have established a connection from Faker to local .csv file. Could you help me change the running schedule? I hope it can be replicated at 6:00 pm every day.
+                    </div>
+                  </div>
+                  
+                  <md-block>For its counterpart, namely the <code>Airbyte</code> task with uuid <code>7657611f-2e32-47a1-89c9-3b887d803bc5</code>, the instruction is <mark><i>verbose</i></mark>, which means it also provides a detailed step-by-step guidance on how to finish the task.
+                  </md-block>
+                  <div class="highlight-quote">
+                    <h3 class="highlight-quote-title">Verbose Instruction</h3>
+                    <div class="highlight-quote-content">
+
+                    I have established a connection from Faker to local .csv file. Could you help me change the running schedule? I hope it can be replicated at 6:00 pm every day. To finish this task, we need to navigate to the settings page and then change the value of the scheduler. Concretely,<br>
+            
+                        1) Click the connection row whose name is "Sample Data (Faker) -> Local CSV" in the main panel;<br>
+                        2) Next, click the "Replication" item on the right of "Status" and "Job History";<br>
+                        3) We can see a panel with name "Configuration". Click this panel, we will see two rows called "Schedule type" and "Replication frequency";<br>
+                        4) To set the schedule as 6:00 p.m. every day, firstly we need to change the schedule type. In the drop-down options on the right, select the schedule type "Cron" instead of "Scheduled";<br>
+                        5) One more thing is to input the value "0 0 18 * * ?" into the cron expression box. After that, you should also find there is one phrase "At 06:00 PM" under the input box;<br>
+                        6) Finally, click the button called "Save changes" at the bottom right of this web page. The schedule is successfully altered.
+                    </div>
+                  </div>
+
+                </div>
+
+                <div title="Env Setup" class="lib_examples" id="TaskPanel3" style="display: none;">
+
+                  <!-- <div class="content has-text-justified"> -->
+                  <md-block>
+                    To initialize the environment for <code>Airbyte</code> task with uuid <code>66936a8e-5cbe-4638-a03a-3ae92eb81e6c</code>, we need to invoke the following environment setup functions sequentially:
+                  </md-block>
+                  <!-- </div> -->
+                  <div class="two-column-container">
+                    <div class="two-column">
+                      <boldtitle>1. File transfer</boldtitle>
+
+                      <pre class="line-numbers" data-language="JSON"><code class="language-json">{
+  "type": "copyfile_from_host_to_guest",
+  "parameters": {
+      "src": "evaluation_examples/examples/airbyte/66936a8e-5cbe-4638-a03a-3ae92eb81e6c/connection.json",
+      "dest": "/home/user/connection.json"
+  }
+}</code></pre>
+
+                      <boldtitle>2. Script Execution</boldtitle>
+                      <pre class="line-numbers" data-language="JSON"><code class="language-json">{
+  "type": "script_and_execute",
+  "parameters": {
+      "src": "evaluation_examples/examples/airbyte/66936a8e-5cbe-4638-a03a-3ae92eb81e6c/init.sh",
+      "dest": "/home/user/init.sh"
+  }
+}</code></pre>
+
+                      <boldtitle>3. Application Launch</boldtitle>
+                      <pre class="line-numbers" data-language="JSON"><code class="language-json">{
+  "type": "google_chrome_browser",
+  "parameters": {
+      "debugging_port": 1337,
+      "listening_port": 9222
+  }
+}</code></pre>
+
+                      <boldtitle>4. Playwright Automation</boldtitle>
+                      <pre class="line-numbers" data-language="JSON"><code class="language-json">{
+  "type": "airbyte_webui_init",
+  "parameters": {
+      "listening_port": 9222,
+      "url": "http://localhost:8000",
+      "actions": [
+          {
+              "type": "login",
+              "email": "anonym@gmail.com",
+              "company": "ANONYM"
+          }
+      ]
+  }
+}</code></pre>
+                    </div>
+                    <div class="two-column right-column">
+                      <img src="./static/images/file_transfer.png" alt="env setup 1">
+                      <img src="./static/images/script_execution.png" alt="env setup 2">
+                      <img src="./static/images/application_launch.png" alt="env setup 3">
+                      <img src="./static/images/playwright_simulation.png" alt="env setup 4">
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <div title="Action Trajectory" class="lib_examples" id="TaskPanel4" style="display: block;">
+                  <md-block>
+                  **Note that:** the action trajectory is generated by the GPT-4o agent and it successfully completes the task 🎉 !
+                  </md-block>
+                  <h2 class="left-aligned">Task Instruction</h2>
+                  <div class="highlight-quote">
+                    <div class="highlight-quote-content">
+                    
+                    I have established a connection from Faker to local .csv file. Could you help me change the running schedule? I hope it can be replicated at 6:00 pm every day.
+                    </div>
+                  </div>
+                  <h2 class="left-aligned">Video Recording</h2>
+                  <!-- Note that, this trajectory is generated by the GPT-4o agent and it successfully completes the task. -->
+                  <video controls muted loop autoplay id="videoPlayer" width="100%">
+                    <source src="static/videos/66936a8e-5cbe-4638-a03a-3ae92eb81e6c.mp4" type="video/mp4">
+                  </video>
+                  <script>
+                      const videoPlayer = document.getElementById('videoPlayer');
+                      // Set playback speed to 8x once the video metadata is loaded
+                      videoPlayer.addEventListener('loadedmetadata', function() {
+                          videoPlayer.playbackRate = 8;
+                          videoPlayer.play();
+                      });
+                  </script>
+                  <h2 class="left-aligned">Action Trajectory</h2>
+                  <pre class="line-numbers"><code class="language-python">## Action 1
+index_80 = (417, 288)
+pyautogui.click(index_80)
+time.sleep(1)
+
+## Action 2
+index_83 = (502, 307)
+pyautogui.click(index_83)
+time.sleep(1)
+
+## Action 3
+index_91 = (883, 404)
+pyautogui.click(index_91)
+time.sleep(1)
+
+## Action 4
+index_102 = (1130, 481)
+pyautogui.click(index_102)
+time.sleep(1)
+
+## Action 5
+index_121 = (1130, 782)
+pyautogui.click(index_121)
+time.sleep(1)
+                    
+## Action 6
+index_98 = (1130, 430)
+pyautogui.click(index_98)
+time.sleep(1)
+
+## Action 7
+index_105 = (1130, 560)
+pyautogui.click(index_105)
+time.sleep(1)
+
+## Action 8
+index_103 = (1050, 481)
+# Clear the current cron expression
+pyautogui.click(index_103)
+pyautogui.hotkey('ctrl', 'a')
+pyautogui.press('backspace')
+time.sleep(1)
+                    
+# Enter the new cron expression
+pyautogui.typewrite('0 18 * * *')
+time.sleep(1)
+
+## Action 9
+index_103 = (1050, 481)
+# Clear the current cron expression
+pyautogui.click(index_103)
+pyautogui.hotkey('ctrl', 'a')
+pyautogui.press('backspace')
+time.sleep(1)
+
+# Enter the new Quartz cron expression
+pyautogui.typewrite('0 0 18 * * ?')
+time.sleep(1)
+
+## Action 10
+index_134 = (1426, 834)
+pyautogui.click(index_134)
+time.sleep(1)
+
+## Action 11
+DONE</code>
+                  </pre>
+                </div>
+
+                <div title="Evaluation" class="lib_examples" id="TaskPanel5" style="display: none;">
+
+                  <md-block>
+                    All evaluation methods can be classified into three categories below:
+                  </md-block>
+                  <img src="static/images/evaluation.png" alt="evaluation" style="max-width: 100%; margin: 0 auto;" />
+
+                  In the current task, we adopt the information-based metric to check whether the schedule is correctly altered to <code>0 0 18 * * *</code> or <code>0 0 18 * * ?</code>.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -585,12 +1012,12 @@
     </div>
   </section>
 
-  <section>
+  <section id="leaderboard">
     <div class="container is-max-desktop">
 
       <h2 class="title is-3">Benchmarking</h2>
       <md-block>
-        We experiment with state-of-the-art LLMs and VLMs, including open-source representatives such as Mixtral-8x7B and Llama-3-70B, and closed-source ones including Qwen-Max, Gemini-Pro-1.5, Claude-3-Opus and GPT families (GPT-4o and GPT-4V). The baseline agent adopts three techniques: 1) Set-of-Mark (SoM), 2) Execution feedback (EF), and 3) Retrieval-augmented generation (RAG). We also split the overall results into different subsets, including <i>abstract</i>, <i>verbose</i>, <i>account</i>, and <i>non-account</i>.
+        We experiment with state-of-the-art LLMs and VLMs, including open-source representatives such as Mixtral-8x7B and Llama-3-70B, and closed-source ones including Qwen-Max, Gemini-Pro-1.5, Claude-3-Opus and GPT families (GPT-4o and GPT-4V). The baseline agent adopts three techniques: 1) Set-of-Mark (SoM), 2) Execution feedback (EF), and 3) Retrieval-augmented generation (RAG). We also split the overall results into different subsets, including <i>Abstract</i>, <i>Verbose</i>, <i>Account</i>, and <i>Non-account</i>.
         **We are actively updating the benchmark with new LLMs, VLMs and methods. Pull requests welcomed!** 👏
       </md-block>
     </div>
@@ -601,24 +1028,24 @@
           <div class="col-md-12">
             <div class="infoCard">
               <div class="infoBody">
-                <div class="tabs is-centered example_lst">
+                <div class="tabs is-centered example_lst2">
                   <ul>
-                    <li class="is-active"><a title="all tasks">all tasks</a></li>
-                    <li><a title="abstract">abstract</a></li>
-                    <li><a title="verbose">verbose</a></li>
-                    <li><a title="account">account</a></li>
-                    <li><a title="non-account">non-account</a></li>
+                    <li class="is-active"><a title="All">All</a></li>
+                    <li><a title="Abstract">Abstract</a></li>
+                    <li><a title="Verbose">Verbose</a></li>
+                    <li><a title="Account">Account</a></li>
+                    <li><a title="Non-account">Non-account</a></li>
                   </ul>
 
                 </div>
                 <script type="text/javascript">
-                  document.querySelectorAll(".example_lst li").forEach(e => {
-                    e.addEventListener("click", Click_1)
+                  document.querySelectorAll(".example_lst2 li").forEach(e => {
+                    e.addEventListener("click", Click_2)
                   })
 
-                  function Click_1(eve) {
+                  function Click_2(eve) {
                     const iTxt = eve.srcElement.innerText
-                    for (let v of document.querySelectorAll(".example_lst a")) {
+                    for (let v of document.querySelectorAll(".example_lst2 a")) {
                       if (iTxt === v.innerText) {
                         v.parentElement.className = "is-active";
                       } else {
@@ -626,12 +1053,14 @@
                       }
                     }
                     for (let block of document.getElementsByClassName('lib_examples')) {
-                      block.style.display = (block.title === iTxt) ? 'block' : 'none';
+                      if (block.id.includes("Board")) {
+                        block.style.display = (block.title === iTxt) ? 'block' : 'none';
+                      }
                     }
                   }
 
                 </script>
-                <div title="all tasks" class="lib_examples" id="BoardPanel1" style="display: block;">
+                <div title="All" class="lib_examples" id="BoardPanel1" style="display: block;">
                   <!-- <div class="content has-text-justified"> -->
                   <md-block>
                     **Notice:** t = temperature, top-p = top-p cutoff, len = max context length, a11ytree = accessibility tree
@@ -791,11 +1220,11 @@
                   </table>
                 </div>
 
-                <div title="abstract" class="lib_examples" id="BoardPanel2" style="display: none;">
+                <div title="Abstract" class="lib_examples" id="BoardPanel2" style="display: none;">
                   <!-- <div class="content has-text-justified"> -->
                   <md-block>
                     **Notice:** t = temperature, top-p = top-p cutoff, len = max context length<br>
-                    <i>“abstract”</i> means the instruction only gives the high-level goal of the task without detailed steps.
+                    <i>“Abstract”</i> means the instruction only gives the high-level goal of the task without detailed steps.
                   </md-block>
                   <!-- </div> -->
                   <table class="table performanceTable">
@@ -890,12 +1319,12 @@
                   </table>
                 </div>
 
-                <div title="verbose" class="lib_examples" id="BoardPanel3" style="display: none;">
+                <div title="Verbose" class="lib_examples" id="BoardPanel3" style="display: none;">
 
                   <!-- <div class="content has-text-justified"> -->
                   <md-block>
                     **Notice:** t = temperature, top-p = top-p cutoff, len = max context length<br>
-                    <i>“verbose”</i> means the instruction also gives a detailed step-by-step guidance on how to finish the task.
+                    <i>“Verbose”</i> means the instruction also gives a detailed step-by-step guidance on how to finish the task.
                   </md-block>
                   <!-- </div> -->
 
@@ -991,10 +1420,10 @@
                   </table>
                 </div>
 
-                <div title="account" class="lib_examples" id="BoardPanel4" style="display: none;">
+                <div title="Account" class="lib_examples" id="BoardPanel4" style="display: none;">
                   <md-block>
                     **Notice:** t = temperature, top-p = top-p cutoff, len = max context length<br>
-                    <i>“account”</i> means authentic user accounts (e.g., <i>BigQuery</i>, <i>Snowflake</i>) are needed to finish tasks in this split.
+                    <i>“Account”</i> means authentic user accounts (e.g., <i>BigQuery</i>, <i>Snowflake</i>) are needed to finish tasks in this split.
                   </md-block>
                   <table class="table performanceTable">
                     <tr>
@@ -1088,11 +1517,11 @@
                   </table>
                 </div>
 
-                <div title="non-account" class="lib_examples" id="BoardPanel5" style="display: none;">
+                <div title="Non-account" class="lib_examples" id="BoardPanel5" style="display: none;">
 
                   <md-block>
                     **Notice:** t = temperature, top-p = top-p cutoff, len = max context length<br>
-                    <i>“non-account”</i> means authentic user accounts are not needed, or tasks in this split can be completed in local host.
+                    <i>“Non-account”</i> means authentic user accounts are not needed, or tasks in this split can be completed in local host.
                   </md-block>
 
                   <table class="table performanceTable">
