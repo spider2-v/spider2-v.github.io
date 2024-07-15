@@ -5,17 +5,28 @@
     <meta charset="UTF-8">
     <title>Enhanced Data Explorer with Bulma</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/explorer.css">
+    <!-- coding environment -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
     <style>
         .is-halfheight {
             height: 50vh;
             overflow-y: scroll;
+        }
+        pre {
+            max-height: 500px; /* Adjust as needed */
+            overflow: auto;
         }
 
         iframe {
             max-width: 100%;
         }
 
-        .duck_icon {
+        .gpt_icon {
             vertical-align: middle;
             margin-left: 5px;
         }
@@ -102,7 +113,24 @@
             border-radius: 4px;
             font-size: 1rem;
         }
-    </style>
+        .highlight-quote {
+            background-color: #f9f9f9; /* Light background color */
+            border-left: 4px solid #007BFF; /* Blue left border */
+            padding: 10px 15px; /* Padding inside the block */
+            margin: 15px 0; /* Margin around the block */
+            color: #333; /* Text color */
+        }
+        .highlight-quote-title {
+            font-weight: bold; /* Bold font for title */
+            margin-top: 0; /* Remove top margin */
+            margin-bottom: 10px; /* Space between title and content */
+            color: #007BFF; /* Same color as the border */
+        }
+        .highlight-quote-content {
+            font-style: italic; /* Italic font style for content */
+            max-height: 200px; /* Max height for the content */
+            overflow: auto; /* Add scrollbars if needed */
+        }
     </style>
 </head>
 
@@ -111,10 +139,10 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="title is-3">Data Explorer</h2>
+            <h2 class="title is-3">Task Explorer</h2>
             <div class="notification is-info">
                 <md-block>
-                    Below we show *a small subset of* **Spider2-V** tasks, which allows you to explore the data in detail.
+                    Below we show a small subset of <a href="https://spider2-v.github.io/"><img src="static/images/favicon.png" style="height: 1em; width: auto;"/> <b>Spider2-V</b></a> tasks, which allows you to explore the tasks in detail.
                 </md-block>
             </div>
 
@@ -127,42 +155,64 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="content">
+                                <div class="box">
+                                    <div>
+                                        <b>Task id:</b>
+                                        <span class="taskid-label" id="taskid-text">uuid of the selected task</span>
+                                        
+                                        <h6 class="title is-6"></h6>
+                                        <div id="status-flag">
+                                            <b>Status:</b>
+                                            <span class="tag-success">success</span> or <span class="tag-failure">failure</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <h5>Instruction</h5>
+                                    <div id="tag-list">
+                                        <b>Tags:</b>
+                                        <span class="tag-abstract">abstract</span>
+                                        <span class="tag-verbose">verbose</span>
+                                        <span class="tag-account">account</span>
+                                        <span class="tag-cli">cli</span>
+                                        <span class="tag-gui">gui</span>
+                                        <span class="tag-cli-gui">cli+gui</span>
+                                        <span class="tag-easy">easy</span>
+                                        <span class="tag-medium">medium</span>
+                                        <span class="tag-hard">hard</span>
+                                    </div>
+                                    <div class="highlight-quote">
+                                        <div class="highlight-quote-content" id="instruction-text">
+                                            Select a task on the left panel to view the instruction.
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="box">
                                     <h5>Recording</h5>
 
                                     <div class="column has-text-centered is-vcentered"
-                                        style="font-weight: 300; font-size: 1.1em">Select a
-                                        task to view the recording.</div>
-                                    <iframe id="recordingViewer" src="" width="744" height="420" allow="autoplay"
-                                        allowfullscreen></iframe>
-                                    <h6 class="title is-6"></h6>
-                                    <div class="columns" style="font-weight: 100; font-size: 1.0em">*
-                                        Recordings are created with &thinsp; <a
-                                            href="https://github.com/TheDuckAI/DuckTrack">Ducktrack</a><img
-                                            class="duck_icon" src="static/images/duck_icon-removebg-preview.png"
-                                            width="30" height="30">.
-                                    </div>
+                                        style="font-weight: 300; font-size: 1.1em" id="videoPrompt">&#x2020;
+                                        Select a task on the left panel to view the recording.</div>
+                                    <!-- <iframe id="recordingViewer" src="" width="100%" allow="autoplay loop" -->
+                                        <!-- allowfullscreen></iframe> -->
+                                    <video controls muted loop autoplay id="recordingViewer" width="100%">
+                                    </video>
                                 </div>
 
                                 <div class="box">
-                                    <div>
-                                        Task ID:
-                                        <span class="taskid-label" id="taskid-text"></span>
-                                    </div>
-                                </div>
-                                <h5>Instruction</h5>
-                                <div style="width: 100%; height: auto;">
+                                    <h5>Actions</h5>
+                                    <div id="action-text">
+                                    <pre class="line-numbers"><code class="language-python">## Action 1
+action1
 
-                                    <md-block id="instruction-text"></md-block>
+## Aciton 2
+action2
 
-                                </div>
-                                <h6 class="title is-6"></h6>
-                                <h5>Actions</h5>
-                                <div class="panel-body" style="height: 140px; width: 100%; overflow-y:scroll">
-                                    <div style="height: 30%; width: 100%; margin: 0 auto;">
-                                        <md-block id="action-text"></md-block>
-                                    </div>
+## Aciton 3
+action3
+
+...</code></pre></div>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +226,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
 
-            fetch('./static/data/test_small_recording.json')
+            fetch('./static/data/task_ids.json')
                 .then(response => response.json())
                 .then(jsonData => {
                     const container = document.getElementById('categoriesContainer');
@@ -203,7 +253,7 @@
                             taskList.appendChild(listItem);
                             listItem.addEventListener('click', () => {
                                 // Load the task data and update the UI
-                                fetch(`./static/data/test_small_annotations_2.json`)
+                                fetch(`./static/data/task_examples.json`)
                                     .then(response => response.json())
                                     .then(taskData => {
                                         // Update the instruction and action text
@@ -214,11 +264,18 @@
                                             }
                                         }
                                         document.getElementById('taskid-text').innerHTML = taskId;
+                                        document.getElementById('status-flag').innerHTML = `<b>Status:</b> <span class="tag-${taskData.status}">${taskData.status}</span>`;
                                         document.getElementById('instruction-text').innerHTML = taskData.instruction;
-                                        document.getElementById('action-text').innerHTML = taskData.actions;
+                                        document.getElementById('tag-list').innerHTML = `<b>Tags:</b> ${taskData.tags.map(tag => `<span class="tag-${tag}">${tag}</span>`).join(' ')}`;
+                                        document.getElementById('action-text').innerHTML = `<pre class="line-numbers"><code class="language-python">` + taskData.actions + `</code></pre>`;
+                                        document.getElementById('videoPrompt').innerHTML = `&#x2020;
+                                        Video recordings and action trajectory are created by &thinsp;  
+                                        <a href="https://openai.com/index/hello-gpt-4o/">OpenAI GPT-4o</a>
+                                        <img class="gpt_icon" src="static/images/chatgpt.png" width="25" height="25">`;
+                                        Prism.highlightAll();
 
                                         // Update the recording viewer
-                                        document.getElementById('recordingViewer').src = taskData.video;
+                                        document.getElementById('recordingViewer').innerHTML = `<source src="static/videos/${taskId}.mp4" type="video/mp4">`
                                     });
                             });
                             listItem.addEventListener("click", function () {

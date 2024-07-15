@@ -1,0 +1,15 @@
+[
+    {
+        "id": "66936a8e-5cbe-4638-a03a-3ae92eb81e6c",
+        "domain": "Airbyte",
+        "tags": [
+            "abstract",
+            "gui",
+            "medium"
+        ],
+        "instruction": "I have established a connection from Faker to local .csv file. Could you help me change the running schedule? I hope it can be replicated at 18:00 pm every day.",
+        "status": "success",
+        "video": "./static/videos/66936a8e-5cbe-4638-a03a-3ae92eb81e6c.mp4",
+        "actions": "## Action 1\nindex_80 = (417, 288)\npyautogui.click(index_80)\ntime.sleep(1)\n\n## Action 2\nindex_83 = (502, 307)\npyautogui.click(index_83)\ntime.sleep(1)\n\n## Action 3\nindex_91 = (883, 404)\npyautogui.click(index_91)\ntime.sleep(1)\n\n## Action 4\nindex_102 = (1130, 481)\npyautogui.click(index_102)\ntime.sleep(1)\n\n## Action 5\nindex_121 = (1130, 782)\npyautogui.click(index_121)\ntime.sleep(1)\n                    \n## Action 6\nindex_98 = (1130, 430)\npyautogui.click(index_98)\ntime.sleep(1)\n\n## Action 7\nindex_105 = (1130, 560)\npyautogui.click(index_105)\ntime.sleep(1)\n\n## Action 8\nindex_103 = (1050, 481)\n# Clear the current cron expression\npyautogui.click(index_103)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n                    \n# Enter the new cron expression\npyautogui.typewrite('0 18 * * *')\ntime.sleep(1)\n\n## Action 9\nindex_103 = (1050, 481)\n# Clear the current cron expression\npyautogui.click(index_103)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n\n# Enter the new Quartz cron expression\npyautogui.typewrite('0 0 18 * * ?')\ntime.sleep(1)\n\n## Action 10\nindex_134 = (1426, 834)\npyautogui.click(index_134)\ntime.sleep(1)\n\n## Action 11\nDONE"
+    }
+]
