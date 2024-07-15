@@ -8,8 +8,38 @@
             "medium"
         ],
         "instruction": "I have established a connection from Faker to local .csv file. Could you help me change the running schedule? I hope it can be replicated at 18:00 pm every day.",
-        "status": "success",
+        "model": "gpt-4o",
         "video": "./static/videos/66936a8e-5cbe-4638-a03a-3ae92eb81e6c.mp4",
-        "actions": "## Action 1\nindex_80 = (417, 288)\npyautogui.click(index_80)\ntime.sleep(1)\n\n## Action 2\nindex_83 = (502, 307)\npyautogui.click(index_83)\ntime.sleep(1)\n\n## Action 3\nindex_91 = (883, 404)\npyautogui.click(index_91)\ntime.sleep(1)\n\n## Action 4\nindex_102 = (1130, 481)\npyautogui.click(index_102)\ntime.sleep(1)\n\n## Action 5\nindex_121 = (1130, 782)\npyautogui.click(index_121)\ntime.sleep(1)\n                    \n## Action 6\nindex_98 = (1130, 430)\npyautogui.click(index_98)\ntime.sleep(1)\n\n## Action 7\nindex_105 = (1130, 560)\npyautogui.click(index_105)\ntime.sleep(1)\n\n## Action 8\nindex_103 = (1050, 481)\n# Clear the current cron expression\npyautogui.click(index_103)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n                    \n# Enter the new cron expression\npyautogui.typewrite('0 18 * * *')\ntime.sleep(1)\n\n## Action 9\nindex_103 = (1050, 481)\n# Clear the current cron expression\npyautogui.click(index_103)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n\n# Enter the new Quartz cron expression\npyautogui.typewrite('0 0 18 * * ?')\ntime.sleep(1)\n\n## Action 10\nindex_134 = (1426, 834)\npyautogui.click(index_134)\ntime.sleep(1)\n\n## Action 11\nDONE"
+        "status": "success",
+        "actions": "## Action 1\nindex_80 = (417, 288)\npyautogui.click(index_80)\ntime.sleep(1)\n\n## Action 2\nindex_83 = (502, 307)\npyautogui.click(index_83)\ntime.sleep(1)\n\n## Action 3\nindex_91 = (883, 404)\npyautogui.click(index_91)\ntime.sleep(1)\n\n## Action 4\nindex_102 = (1130, 481)\npyautogui.click(index_102)\ntime.sleep(1)\n\n## Action 5\nindex_121 = (1130, 782)\npyautogui.click(index_121)\ntime.sleep(1)\n\n## Action 6\nindex_98 = (1130, 430)\npyautogui.click(index_98)\ntime.sleep(1)\n\n## Action 7\nindex_105 = (1130, 560)\npyautogui.click(index_105)\ntime.sleep(1)\n\n## Action 8\nindex_103 = (1050, 481)\n# Clear the current cron expression\npyautogui.click(index_103)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n\n# Enter the new cron expression\npyautogui.typewrite('0 18 * * *')\ntime.sleep(1)\n\n## Action 9\nindex_103 = (1050, 481)\n# Clear the current cron expression\npyautogui.click(index_103)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n\n# Enter the new Quartz cron expression\npyautogui.typewrite('0 0 18 * * ?')\ntime.sleep(1)\n\n## Action 10\nindex_134 = (1426, 834)\npyautogui.click(index_134)\ntime.sleep(1)\n\n## Action 11\nDONE"
+    },
+    {
+        "id": "a4b97d94-5ff9-4b86-82ae-352c0ef521e9",
+        "domain": "BigQuery",
+        "tags": [
+            "account",
+            "gui",
+            "verbose",
+            "easy"
+        ],
+        "instruction": "Connect the Bigquery project to the external resource of Vertex AI. The connection id is 'text_generation'.\nHere is a step-by-step tutorial from an expert instructing you how to complete it: We need to connect to the external resource Vertex AI.\n1. Click \"+Add\" in explorer to add a new connection.\n2. At this time we found that a new window popped up on the right side of the screen, click 'Connections to external data sources'。\n3. In the Connection type list, select Vertex AI remote models, remote functions and BigLake (Cloud Resource)\n4. Set Connection ID to 'text_generation'\n5. Click the blue button below 'CREATE CONNECTION'.\nConnection established\nYou can exactly follow the detailed plan above or proactively tackle the task based on the real-time environment interaction by yourself.",
+        "model": "gpt-4o",
+        "video": "./static/videos/a4b97d94-5ff9-4b86-82ae-352c0ef521e9.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_74 = (355, 272)\npyautogui.click(index_74)\n\n## Action 2\nindex_52 = (1326, 443)\npyautogui.click(index_52)\n\n## Action 3\nindex_33 = (1215, 248)\npyautogui.click(index_33)\n\n## Action 4\nindex_41 = (1207, 422)\npyautogui.click(index_41)\n\n## Action 5\nindex_38 = (1215, 306)\npyautogui.click(index_38)\npyautogui.write('text_generation')\n\n## Action 6\nindex_63 = (1038, 850)\npyautogui.click(index_63)\n\n## Action 7\nindex_186 = (860, 830)\npyautogui.click(index_186)\n\n## Action 8\nDONE"
+    },
+    {
+        "id": "1e8df695-bd1b-45b3-b557-e7d599cf7597",
+        "domain": "Excel",
+        "tags": [
+            "abstract",
+            "cli-gui",
+            "medium"
+        ],
+        "instruction": "Add a new column named \"Profit\" and calculate the profit for each week by subtracting \"COGS\" from \"Sales\" in that column.",
+        "model": "gpt-4o",
+        "video": "./static/videos/1e8df695-bd1b-45b3-b557-e7d599cf7597.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_44 = (427, 210)\n# Click on cell D1 and type \"Profit\"\npyautogui.click(index_44)\npyautogui.write('Profit')\npyautogui.press('enter')\n\n## Action 2\nindex_61 = (427, 253)\n# Click on cell D2 and enter the formula to calculate profit\npyautogui.click(index_61)\npyautogui.write('=B2-C2')\npyautogui.press('enter')\n\n## Action 3\nindex_61 = (427, 253)\n# Select cell D2\npyautogui.click(index_61)\npyautogui.hotkey('ctrl', 'c')\n# Select the range from D3 to D11 to paste the formula\npyautogui.moveTo(389, 262)\npyautogui.dragTo(389, 406, duration=1, button='left')\n# Paste the formula\npyautogui.hotkey('ctrl', 'v')\n\n## Action 4\nDONE"
     }
 ]

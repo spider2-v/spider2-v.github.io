@@ -1,5 +1,11 @@
 {
     "Airbyte": [
         "66936a8e-5cbe-4638-a03a-3ae92eb81e6c"
+    ],
+    "BigQuery": [
+        "a4b97d94-5ff9-4b86-82ae-352c0ef521e9"
+    ],
+    "Excel": [
+        "1e8df695-bd1b-45b3-b557-e7d599cf7597"
     ]
 }

@@ -131,6 +131,18 @@
             max-height: 200px; /* Max height for the content */
             overflow: auto; /* Add scrollbars if needed */
         }
+        #recordingViewerContainer {
+            position: relative;
+            width: 100%;
+            padding-top: 58%;
+        }
+        #recordingViewer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -194,10 +206,11 @@
                                     <div class="column has-text-centered is-vcentered"
                                         style="font-weight: 300; font-size: 1.1em" id="videoPrompt">&#x2020;
                                         Select a task on the left panel to view the recording.</div>
-                                    <!-- <iframe id="recordingViewer" src="" width="100%" allow="autoplay loop" -->
-                                        <!-- allowfullscreen></iframe> -->
-                                    <video controls muted loop autoplay id="recordingViewer" width="100%">
-                                    </video>
+                                    <div id="recordingViewerContainer">
+                                        <iframe id="recordingViewer" src="" allow="controls muted loop autoplay" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- <video controls muted loop autoplay id="recordingViewer" width="100%"> -->
+                                    <!-- </video> -->
                                 </div>
 
                                 <div class="box">
@@ -266,7 +279,13 @@ action3
                                         document.getElementById('taskid-text').innerHTML = taskId;
                                         document.getElementById('status-flag').innerHTML = `<b>Status:</b> <span class="tag-${taskData.status}">${taskData.status}</span>`;
                                         document.getElementById('instruction-text').innerHTML = taskData.instruction;
-                                        document.getElementById('tag-list').innerHTML = `<b>Tags:</b> ${taskData.tags.map(tag => `<span class="tag-${tag}">${tag}</span>`).join(' ')}`;
+                                        document.getElementById('tag-list').innerHTML = `<b>Tags:</b> ${taskData.tags.map(tag => {
+                                            if (tag === 'cli-gui') {
+                                                return `<span class="tag-cli-gui">cli+gui</span>`;
+                                            } else {
+                                                return `<span class="tag-${tag}">${tag}</span>`;
+                                            }
+                                            }).join(' ')}`;
                                         document.getElementById('action-text').innerHTML = `<pre class="line-numbers"><code class="language-python">` + taskData.actions + `</code></pre>`;
                                         document.getElementById('videoPrompt').innerHTML = `&#x2020;
                                         Video recordings and action trajectory are created by &thinsp;  
@@ -275,7 +294,7 @@ action3
                                         Prism.highlightAll();
 
                                         // Update the recording viewer
-                                        document.getElementById('recordingViewer').innerHTML = `<source src="static/videos/${taskId}.mp4" type="video/mp4">`
+                                        document.getElementById('recordingViewer').src = `static/videos/${taskData.id}.mp4`;
                                     });
                             });
                             listItem.addEventListener("click", function () {
