@@ -1,11 +1,56 @@
 {
     "Airbyte": [
-        "66936a8e-5cbe-4638-a03a-3ae92eb81e6c"
+        "66936a8e-5cbe-4638-a03a-3ae92eb81e6c",
+        "913f5bee-a42f-4457-a023-6559d2e22653",
+        "f82b4771-fdcf-497b-bd69-500e4ce2c1d7",
+        "60b31448-7556-43fa-93fd-5971ee42ed6e"
+    ],
+    "dbt": [
+        "a0105f8e-a3dc-4464-81c2-ab2f301e215f",
+        "cac4f956-2fd7-46f7-bab6-2e2df1d0d9e1"
+    ],
+    "Dagster": [
+        "22ef9058-6188-422a-9c12-e6934e4ed936",
+        "0dff0011-afff-4ab8-ae07-83f5ab95d215",
+        "aa012184-9223-4dba-b1f3-f18ed7cbd33d"
     ],
     "BigQuery": [
-        "a4b97d94-5ff9-4b86-82ae-352c0ef521e9"
+        "a4b97d94-5ff9-4b86-82ae-352c0ef521e9",
+        "9d0df982-fa73-464a-a9bc-01c29a244aa5",
+        "d953c3e1-20e7-4e5e-a970-a4d921d20c35"
+    ],
+    "Snowflake": [
+        "9a60518d-1bbd-4d8b-8175-081903ea2282"
     ],
     "Excel": [
         "1e8df695-bd1b-45b3-b557-e7d599cf7597"
+    ],
+    "ServiceNow": [
+        "eae9d8bd-32a5-4b50-b495-8e5d8a5967e8",
+        "36b75163-2744-4627-a153-aaf259ba927b",
+        "3b9da56c-4e9f-455f-b91b-6147cafe44e3",
+        "a0687e83-5815-45f9-b736-7fb83b6033da"
+    ],
+    "JupyterLab": [
+        "8ecc0ac2-3083-4be0-ace9-43079288d717",
+        "910797bf-086d-4d21-9d8d-22758f2cd4a4",
+        "2ed53418-f813-479f-b8a0-134bfebec393"
+    ],
+    "Metabase": [
+        "88df855a-eab8-4732-bb63-9c907b806cf1",
+        "fd2353ce-6c7b-4fc4-92d6-bc122e02f083",
+        "d294bf44-fed3-4958-9740-3960010bcb78",
+        "cc22cc89-58c8-4bd6-a319-691f023f6cd7",
+        "d57298f3-8191-4cec-9e63-ce1a90b0a2a2",
+        "d71943f6-8ee1-4836-9536-fd0e3436cec4"
+    ],
+    "Superset": [
+        "6749d85d-b57c-4f27-9b2d-8c0d12658cf2",
+        "fc08281a-ae88-436e-845f-2260ff49fe94"
+    ],
+    "Airflow": [
+        "33c8ce09-de8b-4432-8308-603b98513fdc",
+        "699e0c0a-3fdc-4c10-ad9f-c4c9d7a9947b",
+        "57a13efe-c008-4bc9-8959-36276115da0b"
     ]
 }

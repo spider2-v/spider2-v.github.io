@@ -131,17 +131,9 @@
             max-height: 200px; /* Max height for the content */
             overflow: auto; /* Add scrollbars if needed */
         }
-        #recordingViewerContainer {
-            position: relative;
-            width: 100%;
-            padding-top: 58%;
-        }
         #recordingViewer {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -149,12 +141,13 @@
 <body>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 
-    <section class="section">
+    <section class="section is-max-desktop">
         <div class="container">
-            <h2 class="title is-3">Task Explorer</h2>
+            <h2 class="title is-3" style="display: inline-block; vertical-align: middle;"><img src="static/images/favicon.png" style="height: 2.4em; width: auto; vertical-align: middle;"/> Spider2-V Task Explorer</h2>
             <div class="notification is-info">
                 <md-block>
-                    Below we show a small subset of <a href="https://spider2-v.github.io/"><img src="static/images/favicon.png" style="height: 1em; width: auto;"/> <b>Spider2-V</b></a> tasks, which allows you to explore the tasks in detail.
+                    Below we show a small subset of <a href="https://spider2-v.github.io/"><b>Spider2-V</b></a> tasks, which allows you to explore the tasks in detail.<br>
+                    Only tasks that GPT-4o succeeds to solve are presented (relatively simple). More difficult tasks with groud-truth actions will be added in the future.
                 </md-block>
             </div>
 
@@ -162,7 +155,7 @@
                 <div class="column is-one-quarter categorycontainer" id="categoriesContainer">
 
                 </div>
-                <div class="column">
+                <div class="column is-three-quarter">
                     <!-- Data Explorer UI Portions -->
                     <div class="card">
                         <div class="card-content">
@@ -202,15 +195,11 @@
 
                                 <div class="box">
                                     <h5>Recording</h5>
-
                                     <div class="column has-text-centered is-vcentered"
                                         style="font-weight: 300; font-size: 1.1em" id="videoPrompt">&#x2020;
                                         Select a task on the left panel to view the recording.</div>
-                                    <div id="recordingViewerContainer">
-                                        <iframe id="recordingViewer" src="" allow="controls muted loop autoplay" allowfullscreen></iframe>
-                                    </div>
-                                    <!-- <video controls muted loop autoplay id="recordingViewer" width="100%"> -->
-                                    <!-- </video> -->
+                                    <video controls muted loop autoplay id="recordingViewer" src="">
+                                    </video>
                                 </div>
 
                                 <div class="box">
@@ -286,12 +275,16 @@ action3
                                                 return `<span class="tag-${tag}">${tag}</span>`;
                                             }
                                             }).join(' ')}`;
+                                        
+                                        // action code block
                                         document.getElementById('action-text').innerHTML = `<pre class="line-numbers"><code class="language-python">` + taskData.actions + `</code></pre>`;
+                                        Prism.highlightAll();
+                                        
+                                        // adjuest the video prompt according to agents or models
                                         document.getElementById('videoPrompt').innerHTML = `&#x2020;
                                         Video recordings and action trajectory are created by &thinsp;  
                                         <a href="https://openai.com/index/hello-gpt-4o/">OpenAI GPT-4o</a>
                                         <img class="gpt_icon" src="static/images/chatgpt.png" width="25" height="25">`;
-                                        Prism.highlightAll();
 
                                         // Update the recording viewer
                                         document.getElementById('recordingViewer').src = `static/videos/${taskData.id}.mp4`;

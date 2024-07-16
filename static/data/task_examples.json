@@ -14,6 +14,120 @@
         "actions": "## Action 1\nindex_80 = (417, 288)\npyautogui.click(index_80)\ntime.sleep(1)\n\n## Action 2\nindex_83 = (502, 307)\npyautogui.click(index_83)\ntime.sleep(1)\n\n## Action 3\nindex_91 = (883, 404)\npyautogui.click(index_91)\ntime.sleep(1)\n\n## Action 4\nindex_102 = (1130, 481)\npyautogui.click(index_102)\ntime.sleep(1)\n\n## Action 5\nindex_121 = (1130, 782)\npyautogui.click(index_121)\ntime.sleep(1)\n\n## Action 6\nindex_98 = (1130, 430)\npyautogui.click(index_98)\ntime.sleep(1)\n\n## Action 7\nindex_105 = (1130, 560)\npyautogui.click(index_105)\ntime.sleep(1)\n\n## Action 8\nindex_103 = (1050, 481)\n# Clear the current cron expression\npyautogui.click(index_103)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n\n# Enter the new cron expression\npyautogui.typewrite('0 18 * * *')\ntime.sleep(1)\n\n## Action 9\nindex_103 = (1050, 481)\n# Clear the current cron expression\npyautogui.click(index_103)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n\n# Enter the new Quartz cron expression\npyautogui.typewrite('0 0 18 * * ?')\ntime.sleep(1)\n\n## Action 10\nindex_134 = (1426, 834)\npyautogui.click(index_134)\ntime.sleep(1)\n\n## Action 11\nDONE"
     },
     {
+        "id": "913f5bee-a42f-4457-a023-6559d2e22653",
+        "domain": "Airbyte",
+        "tags": [
+            "abstract",
+            "gui",
+            "easy"
+        ],
+        "instruction": "I want to transfer data from Faker to a target database. Could you help me setup the source?",
+        "model": "gpt-4o",
+        "video": "./static/videos/913f5bee-a42f-4457-a023-6559d2e22653.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_36 = (169, 264)\npyautogui.click(index_36)\n\n## Action 2\nindex_22 = (756, 127)\npyautogui.click(index_22)\ntime.sleep(1)\npyautogui.write(\"faker\")\n\n## Action 3\nindex_129 = (765, 169)\npyautogui.click(index_129)\n\n## Action 4\nindex_19 = (89, 127)\npyautogui.click(index_19)\n\n## Action 5\nindex_23 = (756, 127)\npyautogui.click(index_23)\ntime.sleep(1)\npyautogui.write(\"faker\")\n\n## Action 6\nindex_130 = (765, 169)\npyautogui.click(index_130)\n\n## Action 7\nindex_130 = (1427, 802)\npyautogui.click(index_130)\n\n## Action 8\nindex_24 = (1332, 127)\npyautogui.click(index_24)\ntime.sleep(1)\npyautogui.write(\"localhost:8000/workspaces/1f3dcee5-a48a-4d79-9dd1-e06151174a5e/source/new-source\")\npyautogui.press(\"enter\")\n\n## Action 9\nindex_17 = (326, 84)\nindex_34 = (136, 231)\npyautogui.click(index_17)\ntime.sleep(1)\n\n## Action 9\nindex_17 = (326, 84)\nindex_34 = (136, 231)\npyautogui.click(index_34)\ntime.sleep(1)\n\n## Action 10\nindex_38 = (140, 202)\npyautogui.click(index_38)\ntime.sleep(1)\n\n## Action 11\nindex_21 = (772, 127)\npyautogui.click(index_21)\ntime.sleep(1)\npyautogui.hotkey('ctrl', 'a')\ntime.sleep(1)\npyautogui.press('backspace')\ntime.sleep(1)\npyautogui.write('localhost:8000/workspaces/1f3dcee5-a48a-4d79-9dd1-e06151174a5e/source/new-source')\npyautogui.press('enter')\n\n## Action 12\npyautogui.scroll(-500)  # Scroll down\ntime.sleep(1)\n\n## Action 13\npyautogui.click(415, 271)  # Click on the search bar\ntime.sleep(1)\npyautogui.write('faker')\ntime.sleep(1)\n\n## Action 14\nindex_75 = (484, 362)\npyautogui.click(index_75)  # Click on the \"Sample Data (Faker) COMMUNITY\" button\ntime.sleep(1)\n\n## Action 15\nindex_90 = (830, 633)\npyautogui.click(index_90)  # Click on the \"Set up source\" button\ntime.sleep(1)\n\nExceeded the maximum number of steps. Forced to stop!"
+    },
+    {
+        "id": "f82b4771-fdcf-497b-bd69-500e4ce2c1d7",
+        "domain": "Airbyte",
+        "tags": [
+            "abstract",
+            "gui",
+            "medium"
+        ],
+        "instruction": "There is already an airbyte connection from Postgres to Postgres created. Please help me change the connection sync mode from full refresh | Overwrite to full refresh | append.",
+        "model": "gpt-4o",
+        "video": "./static/videos/f82b4771-fdcf-497b-bd69-500e4ce2c1d7.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_80 = (417, 288)\npyautogui.click(index_80)\n\n## Action 2\nindex_83 = (502, 307)\npyautogui.click(index_83)\n\n## Action 3\nindex_141 = (950, 693)\npyautogui.click(index_141)\n\n## Action 4\nindex_154 = (967, 857)\npyautogui.click(index_154)\n\n## Action 5\nindex_149 = (1426, 834)\npyautogui.click(index_149)\n\n## Action 6\nindex_40 = (1005, 611)\npyautogui.click(index_40)\n\n## Action 7\nDONE"
+    },
+    {
+        "id": "60b31448-7556-43fa-93fd-5971ee42ed6e",
+        "domain": "Airbyte",
+        "tags": [
+            "gui",
+            "verbose",
+            "medium"
+        ],
+        "instruction": "Both the source and target have been set up in airbyte. Help me construct a connection in the Airbyte UI. Oh, just keep the default values for all fields.\nHere is a step-by-step tutorial from an expert instructing you how to complete it: The data source and destination have been configured, now we want to build one connection. To complete this:\n1. In the Airbyte homepage, click the button \"Create your first connection\" at the bottom;\n2. Next, we click to select the existing source \"Sample Data (Faker)\" shown in the middle of the web page;\n3. As for the destination, we can also find one item row with title \"Local SQLite\". Click it;\n4. In the directed page, we can find that the engine is fetching the data schema. Just wait for some time;\n5. Now, we come to the page for connection configuration. For this moment, it is ok to keep all values by default. Thus, we directly scroll down to the bottom of the page without any modification;\n6. Click the button \"Set up connection\" at the bottom right. The connection will be successfully set up.\nYou can exactly follow the detailed plan above or proactively tackle the task based on the real-time environment interaction by yourself.",
+        "model": "gpt-4o",
+        "video": "./static/videos/60b31448-7556-43fa-93fd-5971ee42ed6e.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_89 = (891, 733)\npyautogui.click(index_89)\n\n## Action 2\nindex_100 = (891, 445)\npyautogui.click(index_100)\n\n## Action 3\nindex_105 = (891, 490)\npyautogui.click(index_105)\n\n## Action 4\nWAIT\n\n## Action 5\nindex_132 = (1364, 861)\npyautogui.scroll(-500)\ntime.sleep(1)\npyautogui.click(index_132)\n\n## Action 6\npyautogui.click(x=1350, y=800)\n\n## Action 7\nindex_170 = (1414, 841)\npyautogui.click(index_170)\n\n## Action 8\nindex_103 = (1388, 386)\npyautogui.click(index_103)\n\n## Action 9\nindex_104 = (1380, 386)\npyautogui.click(index_104)\n\n## Action 10\nDONE"
+    },
+    {
+        "id": "a0105f8e-a3dc-4464-81c2-ab2f301e215f",
+        "domain": "dbt",
+        "tags": [
+            "abstract",
+            "account",
+            "cli-gui",
+            "medium"
+        ],
+        "instruction": "Install dbt-cloud-cli from GitHub and extract the binary to the same folder as the dbt project \"analytics\". Follow the instruction \"Step 1: Install\" specified in the opened account profile page.",
+        "model": "gpt-4o",
+        "video": "./static/videos/a0105f8e-a3dc-4464-81c2-ab2f301e215f.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_91 = (986, 392)\npyautogui.click(index_91)\n\n## Action 2\nindex_97 = (1059, 446)\npyautogui.click(index_97)\n\n## Action 3\nindex_135 = (226, 867)\npyautogui.click(index_135)\n\n## Action 4\nindex_118 = (589, 783)\npyautogui.click(index_118)\n\n## Action 5\nWAIT\n\n## Action 6\nindex_4 = (35, 133)\npyautogui.click(index_4)\n\n## Action 7\npyautogui.typewrite('cd ~/Downloads\\n')\ntime.sleep(1)\npyautogui.typewrite('tar -xzvf dbt_0.37.15_linux_amd64.tar.gz -C ~/projects/analytics\\n')\n\n## Action 7\npyautogui.typewrite('cd ~/Downloads\\n')\ntime.sleep(1)\npyautogui.typewrite('tar -xzvf dbt_0.37.15_linux_amd64.tar.gz -C ~/projects/analytics\\n')\n\n## Action 8\npyautogui.typewrite('ls ~/projects/analytics\\n')\n\n## Action 8\npyautogui.typewrite('ls ~/projects/analytics\\n')\n\n## Action 9\npyautogui.typewrite('chmod +x ~/projects/analytics/dbt\\n')\ntime.sleep(1)\npyautogui.typewrite('~/projects/analytics/dbt --version\\n')\n\n## Action 9\npyautogui.typewrite('chmod +x ~/projects/analytics/dbt\\n')\ntime.sleep(1)\npyautogui.typewrite('~/projects/analytics/dbt --version\\n')\n\n## Action 10\nindex_3 = (35, 65)\nindex_27 = (89, 127)\nindex_3 = (35, 65)\nindex_27 = (89, 127)\npyautogui.click(index_3)\ntime.sleep(1)\npyautogui.click(index_27)\ntime.sleep(1)\npyautogui.typewrite('dbt-labs/dbt-cli/releases\\n')\npyautogui.hotkey('enter')\n\n## Action 10\nindex_3 = (35, 65)\nindex_27 = (89, 127)\nindex_3 = (35, 65)\nindex_27 = (89, 127)\npyautogui.click(index_3)\ntime.sleep(1)\npyautogui.click(index_27)\ntime.sleep(1)\npyautogui.typewrite('dbt-labs/dbt-cli/releases\\n')\npyautogui.hotkey('enter')\n\n## Action 11\nindex_31 = (754, 127)\nindex_31 = (754, 127)\npyautogui.click(index_31)  # Click on the address bar\ntime.sleep(1)\npyautogui.typewrite('https://github.com/dbt-labs/dbt-cli/releases\\n')  # Enter the GitHub releases URL\n\n## Action 11\nindex_31 = (754, 127)\nindex_31 = (754, 127)\npyautogui.click(index_31)\ntime.sleep(1)\npyautogui.typewrite('https://github.com/dbt-labs/dbt-cli/releases\\n')\n\n## Action 12\nindex_119 = (589, 783)\nindex_119 = (589, 783)\npyautogui.click(index_119)\n\n## Action 12\nindex_119 = (589, 783)\nindex_119 = (589, 783)\npyautogui.click(index_119)\n\n## Action 13\nindex_4 = (35, 133)\nindex_4 = (35, 133)\npyautogui.click(index_4)\ntime.sleep(1)\npyautogui.typewrite('cd ~/Downloads\\n')\ntime.sleep(1)\npyautogui.typewrite('tar -xzvf dbt_0.37.15_linux_amd64.tar.gz -C ~/projects/analytics\\n')\ntime.sleep(1)\npyautogui.typewrite('chmod +x ~/projects/analytics/dbt\\n')\ntime.sleep(1)\npyautogui.typewrite('~/projects/analytics/dbt --version\\n')\n\n## Action 13\nindex_4 = (35, 133)\nindex_4 = (35, 133)\npyautogui.click(index_4)\ntime.sleep(1)\npyautogui.typewrite('cd ~/Downloads\\n')\ntime.sleep(1)\npyautogui.typewrite('tar -xzvf dbt_0.37.15_linux_amd64.tar.gz -C ~/projects/analytics\\n')\ntime.sleep(1)\npyautogui.typewrite('chmod +x ~/projects/analytics/dbt\\n')\ntime.sleep(1)\npyautogui.typewrite('~/projects/analytics/dbt --version\\n')\n\n## Action 14\nindex_4 = (35, 133)\nindex_4 = (35, 133)\npyautogui.click(index_4)\ntime.sleep(1)\npyautogui.typewrite('uname -m\\n')\n\n## Action 14\nindex_4 = (35, 133)\nindex_4 = (35, 133)\npyautogui.click(index_4)\ntime.sleep(1)\npyautogui.typewrite('uname -m\\n')\n\n## Action 15\npyautogui.click(index_125)\n\n[Exec Error]: Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nNameError: name 'index_125' is not defined\n\n## Action 15\npyautogui.click(index_125)\n\n[Exec Error]: Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nNameError: name 'index_125' is not defined\n\n## Action 16\npyautogui.click(index_125)\n\n[Exec Error]: Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nNameError: name 'index_125' is not defined\n\n## Action 16\npyautogui.click(index_125)\n\n[Exec Error]: Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nNameError: name 'index_125' is not defined\n\n## Action 17\nindex_4 = (35, 133)\nindex_4 = (35, 133)\npyautogui.click(index_4)\ntime.sleep(1)\npyautogui.typewrite('cd ~/Downloads\\n')\ntime.sleep(1)\npyautogui.typewrite('wget https://github.com/dbt-labs/dbt-cli/releases/download/v0.37.15/dbt_0.37.15_linux_arm64.tar.gz\\n')\n\n## Action 17\nindex_4 = (35, 133)\nindex_4 = (35, 133)\npyautogui.click(index_4)\ntime.sleep(1)\npyautogui.typewrite('cd ~/Downloads\\n')\ntime.sleep(1)\npyautogui.typewrite('wget https://github.com/dbt-labs/dbt-cli/releases/download/v0.37.15/dbt_0.37.15_linux_arm64.tar.gz\\n')\n\n## Action 18\npyautogui.typewrite('tar -xzvf dbt_0.37.15_linux_arm64.tar.gz -C ~/projects/analytics\\n')\n\n## Action 18\npyautogui.typewrite('tar -xzvf dbt_0.37.15_linux_arm64.tar.gz -C ~/projects/analytics\\n')\n\n## Action 19\npyautogui.typewrite('cd ~/projects/analytics\\n')\ntime.sleep(1)\npyautogui.typewrite('chmod +x dbt\\n')\ntime.sleep(1)\npyautogui.typewrite('./dbt --version\\n')\n\n## Action 19\npyautogui.typewrite('cd ~/projects/analytics\\n')\ntime.sleep(1)\npyautogui.typewrite('chmod +x dbt\\n')\ntime.sleep(1)\npyautogui.typewrite('./dbt --version\\n')\n\n## Action 20\nDONE"
+    },
+    {
+        "id": "cac4f956-2fd7-46f7-bab6-2e2df1d0d9e1",
+        "domain": "dbt",
+        "tags": [
+            "abstract",
+            "account",
+            "gui",
+            "medium"
+        ],
+        "instruction": "The current dbt cloud project named \"DesktopEnv\" is staled, help me update its name to \"OSWorld\".",
+        "model": "gpt-4o",
+        "video": "./static/videos/cac4f956-2fd7-46f7-bab6-2e2df1d0d9e1.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_53 = (1369, 347)\npyautogui.click(index_53)\n\n## Action 2\nindex_65 = (1456, 850)\npyautogui.click(index_65)\n\n## Action 3\nindex_37 = (1168, 378)\nindex_65 = (1454, 850)\npyautogui.click(index_37)  # Click on the project name entry\npyautogui.hotkey('ctrl', 'a')  # Select all text\npyautogui.press('backspace')  # Clear the text\npyautogui.typewrite('OSWorld')  # Type the new project name\ntime.sleep(1)  # Wait for a moment to ensure the typing is done\npyautogui.click(index_65)  # Click the save button\n\n## Action 4\nindex_39 = (914, 562)\npyautogui.click(index_39)\n\n## Action 5\nDONE"
+    },
+    {
+        "id": "22ef9058-6188-422a-9c12-e6934e4ed936",
+        "domain": "Dagster",
+        "tags": [
+            "abstract",
+            "gui",
+            "easy"
+        ],
+        "instruction": "Help me materialize the asset top10_story_ids in this dagster project in the UI. Do NOT materialize other assets.",
+        "model": "gpt-4o",
+        "video": "./static/videos/22ef9058-6188-422a-9c12-e6934e4ed936.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_102 = (751, 359)\npyautogui.click(index_102)\ntime.sleep(0.5)\npyautogui.write('top10_story_ids')\npyautogui.press('enter')\n\n## Action 2\nindex_88 = (1409, 359)\npyautogui.click(index_88)\n\n## Action 3\nindex_70 = (707, 631)\npyautogui.click(index_70)\n\n## Action 4\nindex_113 = (1448, 442)\npyautogui.click(index_113)\n\n## Action 5\nindex_243 = (1319, 719)\npyautogui.click(index_243)\n\n## Action 6\nWAIT\n\n## Action 7\nindex_112 = (1448, 442)\npyautogui.click(index_112)\n\n## Action 8\nindex_244 = (1319, 719)\npyautogui.click(index_244)\n\n## Action 9\nindex_57 = (1420, 247)\npyautogui.click(index_57)\n\n## Action 10\nindex_113 = (1448, 442)\npyautogui.click(index_113)\n\n## Action 11\npyautogui.click(index_244)\n\n[Exec Error]: Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nNameError: name 'index_244' is not defined\n\n## Action 11\nDONE"
+    },
+    {
+        "id": "0dff0011-afff-4ab8-ae07-83f5ab95d215",
+        "domain": "Dagster",
+        "tags": [
+            "abstract",
+            "cli-gui",
+            "easy"
+        ],
+        "instruction": "I heard dagster can start a local server. Could you launch the web page on port 8004?",
+        "model": "gpt-4o",
+        "video": "./static/videos/0dff0011-afff-4ab8-ae07-83f5ab95d215.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_4 = (35, 133)\nDAGSTER_WEBSERVER_PORT=8004 dagster dev\n\n[Exec Error]: File \"<string>\", line 2\n    DAGSTER_WEBSERVER_PORT=8004 dagster dev\n                                ^^^^^^^\nSyntaxError: invalid syntax\n\n## Action 1\nindex_4 = (35, 133)\npyautogui.click(index_4)\n\n## Action 2\nindex_22 = (785, 476)\nDAGSTER_WEBSERVER_PORT=8004 dagster dev\n\n[Exec Error]: File \"<string>\", line 2\n    DAGSTER_WEBSERVER_PORT=8004 dagster dev\n                                ^^^^^^^\nSyntaxError: invalid syntax\n\n## Action 2\nindex_22 = (785, 476)\npyautogui.click(index_22)\ntime.sleep(1)\n\n## Action 2\nindex_22 = (785, 476)\npyautogui.write('DAGSTER_WEBSERVER_PORT=8004 dagster dev')\npyautogui.press('enter')\n\n## Action 3\nindex_3 = (35, 65)\npyautogui.click(index_3)\ntime.sleep(2)\n\n## Action 3\nindex_3 = (35, 65)\npyautogui.write('http://localhost:8004')\npyautogui.press('enter')\n\n## Action 4\nDONE"
+    },
+    {
+        "id": "aa012184-9223-4dba-b1f3-f18ed7cbd33d",
+        "domain": "Dagster",
+        "tags": [
+            "cli-gui",
+            "verbose",
+            "medium"
+        ],
+        "instruction": "In the current folder, help me write 4 dagster ops and 1 job in file `file_sizes_job.py`. See README.md for detailed requirements. Also, visualize the job in the dagster UI at port 3000.\nHere is a step-by-step tutorial from an expert instructing you how to complete it: We need to create some Dagster operations and jobs in this project. To do so:\n1. Go to the VS Code editor and open the file \"file_sizes_job.py\".\n2. In the file, add an operation (with decorator \"@op\") to get the file sizes in the directory \"./files\" and a job (with decorator \"@job\") to perform the operation:\n```\nimport os\nfrom dagster import job, op, get_dagster_logger\n\n@op\ndef get_file_sizes():\n    files = [f for f in os.listdir(\"./files\") if os.path.isfile(\"./files/\" + f)]\n    return {f: os.path.getsize(\"./files/\" + f) for f in files}\n\n@job\ndef file_sizes_job():\n    file_sizes = get_file_sizes()\n```\n3. Switch to the terminal, and make sure that you are in the directory \"~/file-ops-and-jobs/\".\n4. Use the command \"dagster dev -f file_sizes_job.py\" to start the Dagster UI.\n5. Switch to the application Chromium or Chrome browser.\n6. Navigate to \"localhost:3000\", and here you can see the job \"file_sizes_job\" with \"get_file_sizes\" operation in the graph.\n7. Go back to VS Code.\n8. In file `file_sizes_job.py`, we include more dagster operations and revise the job:\n```\nimport os\nfrom dagster import job, op, get_dagster_logger\n\n@op\ndef get_file_sizes():\n    files = [f for f in os.listdir(\"./files\") if os.path.isfile(\"./files/\" + f)]\n    return {f: os.path.getsize(\"./files/\" + f) for f in files}\n\n# Add this op\n@op\ndef get_total_file_size(file_sizes):\n    return sum(file_sizes.values())\n\n# Add this op\n@op\ndef get_max_file_size(file_sizes):\n    return max(file_sizes.values())\n\n# Add this op\n@op\ndef report_file_stats(total_size, max_size):\n    get_dagster_logger().info(f\"Total size: {total_size}, max size: {max_size}\")\n        \n@job\ndef file_sizes_job():\n    file_sizes = get_file_sizes()\n    # Add the lines below\n    report_file_stats(\n        get_total_file_size(file_sizes),\n        get_max_file_size(file_sizes)\n    )\n```\n9. Go to the Dagster UI page in Chromium or Chrome browser.\n10. Click the \"Deployment\" button on the menu bar.\n11. Click the \"Reload\" button in the same row of text \"__repository__file_sizes_job@file_sizes_job.py\".\n12. Wait for the reload to finish.\nYou can exactly follow the detailed plan above or proactively tackle the task based on the real-time environment interaction by yourself.",
+        "model": "gpt-4o",
+        "video": "./static/videos/aa012184-9223-4dba-b1f3-f18ed7cbd33d.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_36 = (245, 179)\npyautogui.click(index_36)\ntime.sleep(1)\n\n## Action 2\nindex_37 = (245, 179)\npyautogui.click(index_37)\ntime.sleep(1)\n\n## Action 3\nindex_5 = (35, 201)\npyautogui.click(index_5)\ntime.sleep(1)\n\n## Action 4\nindex_59 = (245, 179)\npyautogui.click(index_59)\ntime.sleep(1)\n\n## Action 5\nimport os\nfrom dagster import job, op, get_dagster_logger\n\n@op\ndef get_file_sizes():\n    files = [f for f in os.listdir(\"./files\") if os.path.isfile(\"./files/\" + f)]\n    return {f: os.path.getsize(\"./files/\" + f) for f in files}\n\n@op\ndef get_total_file_size(file_sizes):\n    return sum(file_sizes.values())\n\n@op\ndef get_max_file_size(file_sizes):\n    return max(file_sizes.values())\n\n@op\ndef report_file_stats(total_size, max_size):\n    get_dagster_logger().info(f\"Total size: {total_size}, max size: {max_size}\")\n        \n@job\ndef file_sizes_job():\n    file_sizes = get_file_sizes()\n    report_file_stats(\n        get_total_file_size(file_sizes),\n        get_max_file_size(file_sizes)\n    )\n\n[Exec Error]: Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\nModuleNotFoundError: No module named 'dagster'\n\n## Action 5\n# Focus on the code editor\npyautogui.click(70, 120)  # Clicking to focus on the text area for typing\n\n# Typing the code into the file_sizes_job.py\npyautogui.write('''\nimport os\nfrom dagster import job, op, get_dagster_logger\n\n@op\ndef get_file_sizes():\n    files = [f for f in os.listdir(\"./files\") if os.path.isfile(\"./files/\" + f)]\n    return {f: os.path.getsize(\"./files/\" + f) for f in files}\n\n@op\ndef get_total_file_size(file_sizes):\n    return sum(file_sizes.values())\n\n@op\ndef get_max_file_size(file_sizes):\n    return max(file_sizes.values())\n\n@op\ndef report_file_stats(total_size, max_size):\n    get_dagster_logger().info(f\"Total size: {total_size}, max size: {max_size}\")\n        \n@job\ndef file_sizes_job():\n    file_sizes = get_file_sizes()\n    report_file_stats(\n        get_total_file_size(file_sizes),\n        get_max_file_size(file_sizes)\n    )\n''')\n\n## Action 6\n# Typing the code into the file_sizes_job.py\npyautogui.write('''\n@op\ndef get_total_file_size(file_sizes):\n    return sum(file_sizes.values())\n\n@op\ndef get_max_file_size(file_sizes):\n    return max(file_sizes.values())\n\n@op\ndef report_file_stats(total_size, max_size):\n    get_dagster_logger().info(f\"Total size: {total_size}, max size: {max_size}\")\n        \n@job\ndef file_sizes_job():\n    file_sizes = get_file_sizes()\n    report_file_stats(\n        get_total_file_size(file_sizes),\n        get_max_file_size(file_sizes)\n    )\n''')\n\n## Action 7\nindex_4 = (35, 133)\n# Save the file\npyautogui.hotkey('ctrl', 's')\ntime.sleep(1)\n\n## Action 7\nindex_4 = (35, 133)\n# Switch to Terminal\npyautogui.click(index_4)\ntime.sleep(1)\n\n# Type the command to start Dagster UI\npyautogui.write('dagster dev -f file_sizes_job.py\\n')\ntime.sleep(5)  # Wait for the server to start\n\n## Action 8\nindex_3 = (35, 65)\n# Switch to Chromium browser\npyautogui.click(index_3)\ntime.sleep(2)\n\n# Navigate to the Dagster UI\npyautogui.write('http://127.0.0.1:3000\\n')\n\n## Action 9\nindex_117 = (772, 127)\n# Click on the address bar\npyautogui.click(index_117)\ntime.sleep(1)\n\n# Clear the current text in the address bar\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\ntime.sleep(1)\n\n# Type the correct URL and navigate to it\npyautogui.write('http://127.0.0.1:3000\\n')\n\n## Action 10\nindex_125 = (222, 183)\n# Click on the \"Overview\" link under the \"file_sizes_job\" job\npyautogui.click(index_125)\n\n## Action 11\nindex_241 = (627, 554)\n# Click on the \"Skip\" button to dismiss the pop-up\npyautogui.click(index_241)\n\n## Action 12\nindex_241 = (627, 554)\n# Click on the \"Skip\" button to dismiss the pop-up\npyautogui.click(index_241)\n\n## Action 13\nindex_241 = (627, 554)\npyautogui.click(index_241)\n\n## Action 14\nindex_139 = (423, 183)\npyautogui.click(index_139)\ntime.sleep(1)\n\n## Action 15\nindex_241 = (627, 554)\nindex_139 = (423, 183)\npyautogui.click(index_241)\ntime.sleep(1)\n\n## Action 15\nindex_241 = (627, 554)\nindex_139 = (423, 183)\npyautogui.click(index_139)\n\nExceeded the maximum number of steps. Forced to stop!"
+    },
+    {
         "id": "a4b97d94-5ff9-4b86-82ae-352c0ef521e9",
         "domain": "BigQuery",
         "tags": [
@@ -29,6 +143,51 @@
         "actions": "## Action 1\nindex_74 = (355, 272)\npyautogui.click(index_74)\n\n## Action 2\nindex_52 = (1326, 443)\npyautogui.click(index_52)\n\n## Action 3\nindex_33 = (1215, 248)\npyautogui.click(index_33)\n\n## Action 4\nindex_41 = (1207, 422)\npyautogui.click(index_41)\n\n## Action 5\nindex_38 = (1215, 306)\npyautogui.click(index_38)\npyautogui.write('text_generation')\n\n## Action 6\nindex_63 = (1038, 850)\npyautogui.click(index_63)\n\n## Action 7\nindex_186 = (860, 830)\npyautogui.click(index_186)\n\n## Action 8\nDONE"
     },
     {
+        "id": "9d0df982-fa73-464a-a9bc-01c29a244aa5",
+        "domain": "BigQuery",
+        "tags": [
+            "account",
+            "gui",
+            "verbose",
+            "medium"
+        ],
+        "instruction": "Open MLB 2016 Pitch-by-Pitch dataset public dataset (also known as baseball), add it to the explorer and view the information.\nHere is a step-by-step tutorial from an expert instructing you how to complete it: BigQuery provides many wonderful open datasets for free access. Today, we will explore one related to baseball. To achieve this goal:\n1. In the Explorer pane, click +Add.\n2. In the **Add** dialog, search `public datasets`\n3. Then click \"Public Datasets\".\n4. In the search bar next to header \"Marketplace\", type in \"baseball\" and click Enter.\n5. There should be only one dataset called \"MLB 2016 Pitch-by-Pitch\". Just click it.\n6. After loading, click the button \"VIEW DATASET\".\n7. Switch to the new opened web tab. It exhibits the dataset info about baseball. This is exactly what we want.\nYou can exactly follow the detailed plan above or proactively tackle the task based on the real-time environment interaction by yourself.",
+        "model": "gpt-4o",
+        "video": "./static/videos/9d0df982-fa73-464a-a9bc-01c29a244aa5.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_75 = (355, 272)\npyautogui.click(index_75)\n\n## Action 2\nindex_36 = (1063, 278)\npyautogui.click(index_36)\npyautogui.write('public datasets')\npyautogui.press('enter')\n\n## Action 3\nindex_40 = (1062, 378)\npyautogui.click(index_40)\n\n## Action 4\nindex_40 = (769, 174)\npyautogui.click(index_40)\npyautogui.write('baseball')\npyautogui.press('enter')\n\n## Action 5\nindex_30 = (1044, 228)\npyautogui.click(index_30)\npyautogui.write('baseball')\npyautogui.press('enter')\n\n## Action 6\nindex_31 = (1341, 442)\npyautogui.click(index_31)\n\n## Action 7\nWAIT\n\n## Action 8\nindex_39 = (819, 421)\npyautogui.click(index_39)\n\n## Action 9\nindex_53 = (150, 368)\npyautogui.click(index_53)\n\n## Action 10\nindex_98 = (170, 437)\npyautogui.click(index_98)\n\n## Action 11\nindex_110 = (265, 495)\npyautogui.click(index_110)\n\n## Action 12\nDONE"
+    },
+    {
+        "id": "d953c3e1-20e7-4e5e-a970-a4d921d20c35",
+        "domain": "BigQuery",
+        "tags": [
+            "account",
+            "gui",
+            "verbose",
+            "medium"
+        ],
+        "instruction": "For the census data in 2012, select the top 5 records with the highest ANNUAL_RANK and build a View named 2012_best\nHere is a step-by-step tutorial from an expert instructing you how to complete it: In this task, we will get a view of top 5 records with highest ANNUAL_RANK. Concretely,\n1. click '+' button on top of the welcome prompt \"Welcome to BigQuery Studio!\". This will open a blank query panel.\n2. write the following SQL into the blank panel \"Untitled query\":\n```\nCREATE VIEW `census.2012_best`\nAS\nSELECT *\nFROM `census.2012`\nORDER BY ANNUAL_RANK\nLIMIT 5\n```\n3. Click the \"> RUN\" button in the menu bar of this panel to execute this SQL;\n4. Wait for a moment. The query results will show below.\nYou can exactly follow the detailed plan above or proactively tackle the task based on the real-time environment interaction by yourself.",
+        "model": "gpt-4o",
+        "video": "./static/videos/d953c3e1-20e7-4e5e-a970-a4d921d20c35.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_18 = (600, 84)\npyautogui.click(index_18)\n\n## Action 2\nindex_41 = (679, 675)\npyautogui.click(index_41)\n\n## Action 3\nindex_17 = (564, 84)\npyautogui.click(index_17)\n\n## Action 4\nindex_46 = (101, 316)\npyautogui.click(index_46)\n\n## Action 5\nindex_121 = (513, 421)\npyautogui.click(index_121)\n\n## Action 6\nindex_131 = (972, 577)\npyautogui.click(index_131)  # Click on the SQL editor area\ntime.sleep(1)\npyautogui.write('''\nCREATE VIEW `census.2012_best`\nAS\nSELECT *\nFROM `census.2012`\nORDER BY ANNUAL_RANK\nLIMIT 5\n''')\n\n## Action 7\nindex_123 = (665, 316)\npyautogui.click(index_123)\n\n## Action 8\nWAIT\n\n## Action 9\nDONE"
+    },
+    {
+        "id": "9a60518d-1bbd-4d8b-8175-081903ea2282",
+        "domain": "Snowflake",
+        "tags": [
+            "account",
+            "cli-gui",
+            "verbose",
+            "medium"
+        ],
+        "instruction": "I heard there are many free to download datasets on Snowflake marketplace. And I am really curious about worldwide addresses. Could you help me get one database about it? Name it `WORLDWIDE_ADDRESSES`.\nHere is a step-by-step tutorial from an expert instructing you how to complete it: In this task, we want to add one database from an existing marketplace on Snowflake. In the opened Snowsight web page, we need to do this:\n1. Click the \"Data Products >> Marketplace\" menu on the left panel;\n2. Then, in the search bar at the top of the right panel, type in \"worldwide addresses\" and press Enter.\n3. In the results of filtered choices, choose and click the first item, which should be \"Worldwide Address Data\". This free dataset from the OpenAddresses project allows Snowflake customers to map lat/long information to address details.\n4. On the right panel in the directed new page, click the \"Get\" button under the prompt \"Free Unlimited access\".\n5. There will be a pop-up window. Click \"Options\" to expand more settings.\n6. Type in the desired database name \"WORLDWIDE_ADDRESSES\" to replace the original one.\n7. Click \"Get\", and wait for a few moment. We will see that the database is \"Ready to Use\".\nYou can exactly follow the detailed plan above or proactively tackle the task based on the real-time environment interaction by yourself.",
+        "model": "gpt-4o",
+        "video": "./static/videos/9a60518d-1bbd-4d8b-8175-081903ea2282.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_59 = (181, 580)\npyautogui.click(index_59)\ntime.sleep(2)\n\n## Action 2\nindex_85 = (701, 249)\npyautogui.click(index_85)\ntime.sleep(1)\npyautogui.write('worldwide addresses')\ntime.sleep(1)\npyautogui.press('enter')\n\n## Action 3\nindex_103 = (903, 537)\npyautogui.click(index_103)\ntime.sleep(2)\n\n## Action 4\nindex_106 = (1307, 319)\npyautogui.click(index_106)\ntime.sleep(2)\n\n## Action 5\nindex_166 = (791, 536)\nindex_169 = (791, 616)\npyautogui.click(index_166)\ntime.sleep(1)\n\n## Action 5\nindex_166 = (791, 536)\nindex_169 = (791, 616)\npyautogui.write('WORLDWIDE_ADDRESSES')\ntime.sleep(1)\npyautogui.click(index_169)\ntime.sleep(2)\n\n## Action 6\nindex_172 = (797, 584)\nindex_180 = (783, 777)\npyautogui.click(index_172)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\npyautogui.write('WORLDWIDE_ADDRESSES')\ntime.sleep(1)\n\n## Action 6\nindex_172 = (797, 584)\nindex_180 = (783, 777)\npyautogui.click(index_180)\ntime.sleep(2)\n\n## Action 7\nindex_157 = (791, 624)\npyautogui.click(index_157)\ntime.sleep(2)\n\n## Action 7\nDONE"
+    },
+    {
         "id": "1e8df695-bd1b-45b3-b557-e7d599cf7597",
         "domain": "Excel",
         "tags": [
@@ -41,5 +200,261 @@
         "video": "./static/videos/1e8df695-bd1b-45b3-b557-e7d599cf7597.mp4",
         "status": "success",
         "actions": "## Action 1\nindex_44 = (427, 210)\n# Click on cell D1 and type \"Profit\"\npyautogui.click(index_44)\npyautogui.write('Profit')\npyautogui.press('enter')\n\n## Action 2\nindex_61 = (427, 253)\n# Click on cell D2 and enter the formula to calculate profit\npyautogui.click(index_61)\npyautogui.write('=B2-C2')\npyautogui.press('enter')\n\n## Action 3\nindex_61 = (427, 253)\n# Select cell D2\npyautogui.click(index_61)\npyautogui.hotkey('ctrl', 'c')\n# Select the range from D3 to D11 to paste the formula\npyautogui.moveTo(389, 262)\npyautogui.dragTo(389, 406, duration=1, button='left')\n# Paste the formula\npyautogui.hotkey('ctrl', 'v')\n\n## Action 4\nDONE"
+    },
+    {
+        "id": "eae9d8bd-32a5-4b50-b495-8e5d8a5967e8",
+        "domain": "ServiceNow",
+        "tags": [
+            "abstract",
+            "account",
+            "cli-gui",
+            "easy"
+        ],
+        "instruction": "Sort the \"incidents\" list by the following fields:\n - Caller (ascending)",
+        "model": "gpt-4o",
+        "video": "./static/videos/eae9d8bd-32a5-4b50-b495-8e5d8a5967e8.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_94 = (288, 294)\npyautogui.click(index_94)\n\n## Action 2\nDONE"
+    },
+    {
+        "id": "36b75163-2744-4627-a153-aaf259ba927b",
+        "domain": "ServiceNow",
+        "tags": [
+            "abstract",
+            "account",
+            "cli-gui",
+            "easy"
+        ],
+        "instruction": "Go to the hardware store and order 5 \"Apple Watch\"",
+        "model": "gpt-4o",
+        "video": "./static/videos/36b75163-2744-4627-a153-aaf259ba927b.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_92 = (730, 284)\npyautogui.click(index_92)\n\n## Action 2\nindex_60 = (1359, 231)\npyautogui.click(index_60)\ntime.sleep(1)\npyautogui.typewrite('Apple Watch')\npyautogui.press('enter')\n\n## Action 3\nindex_95 = (157, 321)\npyautogui.click(index_95)\n\n## Action 4\nindex_91 = (1474, 338)\nindex_101 = (1407, 428)\npyautogui.click(index_91)\ntime.sleep(0.5)\npyautogui.typewrite('5')\npyautogui.press('enter')\ntime.sleep(0.5)\npyautogui.click(index_101)\n\n## Action 5\nDONE"
+    },
+    {
+        "id": "3b9da56c-4e9f-455f-b91b-6147cafe44e3",
+        "domain": "ServiceNow",
+        "tags": [
+            "abstract",
+            "account",
+            "cli-gui",
+            "medium"
+        ],
+        "instruction": "Go to the hardware store and order 9 \"Loaner Laptop\" with configuration {'How long do you need it for ?': '1 day', 'When do you need it ?': 'By the end of the month'}",
+        "model": "gpt-4o",
+        "video": "./static/videos/3b9da56c-4e9f-455f-b91b-6147cafe44e3.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_92 = (730, 284)\npyautogui.click(index_92)\ntime.sleep(1)\n\n## Action 2\npyautogui.scroll(-500)\ntime.sleep(1)\n\n## Action 3\nindex_110 = (158, 629)\npyautogui.click(index_110)\ntime.sleep(1)\n\n## Action 4\nindex_79 = (397, 520)\nindex_80 = (397, 520)\npyautogui.click(index_79)\ntime.sleep(0.5)\npyautogui.click(index_80)\ntime.sleep(1)\n\n## Action 5\nindex_82 = (397, 447)\nindex_91 = (1474, 323)\nindex_97 = (1407, 385)\npyautogui.click(index_82)\ntime.sleep(0.5)\npyautogui.typewrite('By the end of the month')\ntime.sleep(1)\n\n## Action 5\nindex_82 = (397, 447)\nindex_91 = (1474, 323)\nindex_97 = (1407, 385)\npyautogui.click(index_91)\ntime.sleep(0.5)\npyautogui.typewrite('9')\ntime.sleep(1)\n\n## Action 5\nindex_82 = (397, 447)\nindex_91 = (1474, 323)\nindex_97 = (1407, 385)\npyautogui.click(index_97)\ntime.sleep(1)\n\n## Action 6\nindex_97 = (1357, 399)\npyautogui.click(index_97)\ntime.sleep(2)\n\n## Action 7\nDONE"
+    },
+    {
+        "id": "a0687e83-5815-45f9-b736-7fb83b6033da",
+        "domain": "ServiceNow",
+        "tags": [
+            "abstract",
+            "account",
+            "cli-gui",
+            "easy"
+        ],
+        "instruction": "Create a new problem with a value of \"Issue in connecting to internet using modem.\" for field \"Problem statement\" and a value of \"3 - Low\" for field \"Impact\" and a value of \"\" for field \"Service offering\" and a value of \"\" for field \"Assignment group\" and a value of \"3 - Low\" for field \"Urgency\".",
+        "model": "gpt-4o",
+        "video": "./static/videos/a0687e83-5815-45f9-b736-7fb83b6033da.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_125 = (812, 572)\npyautogui.click(index_125)\ntime.sleep(1)\npyautogui.write('Issue in connecting to internet using modem.')\n\n## Action 2\nindex_103 = (1165, 382)\nindex_104 = (1165, 382)\npyautogui.click(index_103)\ntime.sleep(1)\npyautogui.click(index_104)\n\n## Action 3\nindex_107 = (1165, 420)\nindex_108 = (1165, 420)\npyautogui.click(index_107)\ntime.sleep(1)\npyautogui.click(index_108)\n\n## Action 4\nindex_69 = (1468, 225)\npyautogui.click(index_69)\n\n## Action 5\nindex_65 = (1468, 225)\npyautogui.click(index_65)\n\n## Action 6\nindex_129 = (812, 624)\npyautogui.click(index_129)\ntime.sleep(1)\npyautogui.typewrite('Issue in connecting to internet using modem.')\n\n## Action 7\nindex_65 = (1468, 225)\npyautogui.click(index_65)\n\n## Action 8\nDONE"
+    },
+    {
+        "id": "8ecc0ac2-3083-4be0-ace9-43079288d717",
+        "domain": "JupyterLab",
+        "tags": [
+            "abstract",
+            "gui",
+            "easy"
+        ],
+        "instruction": "Help me run all cells in this jupyter notebook. I hope to check the results.",
+        "model": "gpt-4o",
+        "video": "./static/videos/8ecc0ac2-3083-4be0-ace9-43079288d717.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_38 = (251, 165)\npyautogui.click(index_38)\ntime.sleep(0.5)\n\n## Action 2\nindex_319 = (406, 332)\npyautogui.click(index_319)\ntime.sleep(5)\n\n## Action 3\ntime.sleep(10)\n\n## Action 4\nDONE"
+    },
+    {
+        "id": "910797bf-086d-4d21-9d8d-22758f2cd4a4",
+        "domain": "JupyterLab",
+        "tags": [
+            "abstract",
+            "cli-gui",
+            "easy"
+        ],
+        "instruction": "There is one jupyter notebook under the Downloads folder. Open it for me at port 1036.",
+        "model": "gpt-4o",
+        "video": "./static/videos/910797bf-086d-4d21-9d8d-22758f2cd4a4.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_118 = (468, 328)\n~/Downloads\n\n[Exec Error]: File \"<string>\", line 2\n    ~/Downloads\n     ^\nSyntaxError: invalid syntax\n\n## Action 1\nindex_118 = (468, 328)\nnotebook --port=1036\n\n[Exec Error]: File \"<string>\", line 2\n    notebook --port=1036\n    ^^^^^^^^^^^^^^^\nSyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?\n\n## Action 1\nindex_118 = (468, 328)\npyautogui.click(index_118)  # Ensure terminal is focused\ntime.sleep(0.5)\npyautogui.typewrite('cd ~/Downloads\\n', interval=0.1)\ntime.sleep(0.5)\npyautogui.typewrite('jupyter notebook --port=1036\\n', interval=0.1)\n\n## Action 2\nindex_20 = (772, 127)\npyautogui.click(index_20)  # Click on the address bar\ntime.sleep(0.5)\npyautogui.hotkey('ctrl', 'a')  # Select the current URL\npyautogui.typewrite('http://localhost:1036/tree\\n', interval=0.1)  # Type the new URL and press Enter\n\n## Action 3\nindex_77 = (371, 388)\npyautogui.click(index_77)  # Click on the notebook file \"Aragon_Conviction_Voting_Model.ipynb\" to open it\n\n## Action 4\nindex_49 = (233, 295)\npyautogui.click(index_49)  # Click on the \"Open\" button\n\n## Action 5\n# Wait for a short period to allow the notebook interface to fully load\ntime.sleep(2)\n\n## Action 5\nDONE"
+    },
+    {
+        "id": "2ed53418-f813-479f-b8a0-134bfebec393",
+        "domain": "JupyterLab",
+        "tags": [
+            "abstract",
+            "cli",
+            "easy"
+        ],
+        "instruction": "I want to delete the jupyter notebook kernel \"Python (jupyterlab)\", please help me.",
+        "model": "gpt-4o",
+        "video": "./static/videos/2ed53418-f813-479f-b8a0-134bfebec393.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_22 = (784, 414)\npyautogui.click(index_22)\n\n## Action 1\nindex_22 = (784, 414)\npyautogui.typewrite('jupyter kernelspec list\\n', interval=0.1)\n\n## Action 2\njupyter kernelspec remove jupyterlab\n\n[Exec Error]: File \"<string>\", line 1\n    import pyautogui; import time; pyautogui.FAILSAFE = False; jupyter kernelspec remove jupyterlab\n                                                                       ^^^^^^^^^^\nSyntaxError: invalid syntax\n\n## Action 2\npyautogui.typewrite('jupyter kernelspec remove jupyterlab\\n', interval=0.1)\n\n## Action 3\npyautogui.typewrite('y\\n', interval=0.1)\n\n## Action 4\nDONE"
+    },
+    {
+        "id": "88df855a-eab8-4732-bb63-9c907b806cf1",
+        "domain": "Metabase",
+        "tags": [
+            "abstract",
+            "gui",
+            "medium"
+        ],
+        "instruction": "I want to build my first dashboard in the Metabase application and put a question into it. Help me set up a question with the SQL query in the opened 'question1.sql'. Create a new dashboard and add this question to it, named 'New Dashboard' and 'question1' respectively. Good luck!",
+        "model": "gpt-4o",
+        "video": "./static/videos/88df855a-eab8-4732-bb63-9c907b806cf1.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_101 = (800, 87)\npyautogui.click(index_101)\n\n## Action 2\nindex_32 = (1408, 176)\npyautogui.click(index_32)\n\n## Action 3\nindex_131 = (1343, 273)\npyautogui.click(index_131)\n\n## Action 4\nindex_61 = (557, 447)\npyautogui.click(index_61)\n\n## Action 4\nindex_61 = (557, 447)\npyautogui.typewrite('SELECT\\n  \"PUBLIC\".\"ORDERS\".\"USER_ID\" AS \"USER_ID\",\\n  AVG(\"PUBLIC\".\"ORDERS\".\"TAX\") AS \"avg\"\\nFROM\\n  \"PUBLIC\".\"ORDERS\"\\nGROUP BY\\n  \"PUBLIC\".\"ORDERS\".\"USER_ID\"\\nORDER BY\\n  \"PUBLIC\".\"ORDERS\".\"USER_ID\" ASC')\n\n## Action 5\nindex_102 = (791, 713)\npyautogui.click(index_102)\n\n## Action 6\nindex_42 = (1465, 234)\npyautogui.click(index_42)\n\n## Action 7\nindex_34 = (791, 404)\nindex_48 = (800, 87)\npyautogui.click(index_34)\npyautogui.typewrite(\"question1\")\ntime.sleep(0.5)\n\n## Action 7\nindex_34 = (791, 404)\nindex_48 = (800, 87)\npyautogui.click(index_48)\n\n## Action 8\nindex_46 = (1047, 704)\npyautogui.click(index_46)\n\n## Action 9\nindex_32 = (635, 542)\npyautogui.click(index_32)\n\n## Action 10\nindex_42 = (791, 592)\npyautogui.click(index_42)\n\n## Action 11\nindex_34 = (791, 404)\nindex_46 = (1040, 704)\npyautogui.click(index_34)\ntime.sleep(0.5)\npyautogui.typewrite(\"New Dashboard\")\n\n## Action 11\nindex_34 = (791, 404)\nindex_46 = (1040, 704)\npyautogui.click(index_46)\n\n## Action 12\nindex_35 = (1449, 175)\npyautogui.click(index_35)\n\n## Action 13\nDONE"
+    },
+    {
+        "id": "fd2353ce-6c7b-4fc4-92d6-bc122e02f083",
+        "domain": "Metabase",
+        "tags": [
+            "abstract",
+            "gui",
+            "medium"
+        ],
+        "instruction": "This is my first time using Metabase. Can you help me create a new API key? Please name it as \"main\" and grant the permission to the \"Administrators\" group.",
+        "model": "gpt-4o",
+        "video": "./static/videos/fd2353ce-6c7b-4fc4-92d6-bc122e02f083.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_38 = (1478, 176)\npyautogui.click(index_38)\ntime.sleep(1)\n\n## Action 2\nindex_132 = (1395, 273)\npyautogui.click(index_132)\ntime.sleep(1)\n\n## Action 3\nindex_59 = (243, 494)\npyautogui.click(index_59)\ntime.sleep(1)\n\n## Action 4\nindex_92 = (460, 745)\npyautogui.click(index_92)\ntime.sleep(1)\n\n## Action 5\nindex_82 = (1416, 307)\npyautogui.click(index_82)\ntime.sleep(1)\n\n## Action 6\nindex_35 = (791, 440)\npyautogui.click(index_35)  # Click on the \"Key name\" entry box\npyautogui.write('main')\ntime.sleep(0.5)\n\n## Action 7\nindex_38 = (979, 528)\npyautogui.click(index_38)  # Click on the group dropdown\ntime.sleep(0.5)\npyautogui.write('Administrators')  # Enter \"Administrators\" in the dropdown\npyautogui.press('enter')\ntime.sleep(0.5)\n\n## Action 8\nindex_39 = (791, 583)\npyautogui.click(index_39)  # Click on the \"Administrators\" group item in the dropdown\ntime.sleep(0.5)\n\n## Action 9\nindex_42 = (961, 662)\npyautogui.click(index_42)  # Click on the \"Create\" button\ntime.sleep(1)  # Wait for the action to complete\n\n## Action 10\nindex_35 = (791, 484)\nindex_40 = (966, 618)\npyautogui.click(index_35)  # Click on the API key to select it\npyautogui.hotkey('ctrl', 'c')  # Copy the API key\ntime.sleep(0.5)\n\n## Action 10\nindex_35 = (791, 484)\nindex_40 = (966, 618)\npyautogui.click(index_40)  # Click on the \"Done\" button\ntime.sleep(0.5)\n\n## Action 11\nDONE"
+    },
+    {
+        "id": "d294bf44-fed3-4958-9740-3960010bcb78",
+        "domain": "Metabase",
+        "tags": [
+            "abstract",
+            "gui",
+            "easy"
+        ],
+        "instruction": "I have logged in to Metabase and I deleted the Sample Database by accident. Please help me restore the Metabase Sample Database.",
+        "model": "gpt-4o",
+        "video": "./static/videos/d294bf44-fed3-4958-9740-3960010bcb78.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_38 = (1478, 176)\npyautogui.click(index_38)\ntime.sleep(2)\n\n## Action 2\nindex_68 = (1395, 273)\npyautogui.click(index_68)\ntime.sleep(2)\n\n## Action 3\nindex_35 = (389, 183)\npyautogui.click(index_35)\ntime.sleep(2)\n\n## Action 4\nindex_55 = (224, 421)\npyautogui.click(index_55)\ntime.sleep(2)\n\n## Action 5\nDONE"
+    },
+    {
+        "id": "cc22cc89-58c8-4bd6-a319-691f023f6cd7",
+        "domain": "Metabase",
+        "tags": [
+            "abstract",
+            "gui",
+            "medium"
+        ],
+        "instruction": "Recently I want to change my most frequently used email account. Please update the email to \"johnwilson@outlook.com\" for my Metabase account.",
+        "model": "gpt-4o",
+        "video": "./static/videos/cc22cc89-58c8-4bd6-a319-691f023f6cd7.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_38 = (1478, 176)\npyautogui.click(index_38)\n\n## Action 2\nindex_130 = (1395, 231)\npyautogui.click(index_130)\n\n## Action 3\nindex_90 = (946, 778)\npyautogui.click(index_90)\npyautogui.hotkey('ctrl', 'a')\npyautogui.press('backspace')\npyautogui.write('johnwilson@outlook.com')\n\n## Action 4\npyautogui.press('enter')\n\n## Action 5\npyautogui.scroll(-500)\n\n## Action 6\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\n## Action 7\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\n## Action 8\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\n## Action 9\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\n## Action 10\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\n## Action 11\nindex_90 = (946, 679)\nindex_97 = (732, 824)\npyautogui.click(index_90)  # Click the email entry field\ntime.sleep(0.5)\npyautogui.hotkey('ctrl', 'a')  # Select all text\ntime.sleep(0.5)\npyautogui.typewrite('johnwilson@outlook.com')  # Type the new email address\ntime.sleep(0.5)\npyautogui.click(index_97)  # Click the Update button\n\n## Action 12\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\n## Action 13\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\n## Action 14\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\n## Action 15\nindex_97 = (732, 824)\npyautogui.click(index_97)\n\nExceeded the maximum number of steps. Forced to stop!"
+    },
+    {
+        "id": "d57298f3-8191-4cec-9e63-ce1a90b0a2a2",
+        "domain": "Metabase",
+        "tags": [
+            "abstract",
+            "gui",
+            "medium"
+        ],
+        "instruction": "I have logged in to Metabase and I want to clear my databases panel. Please help me delete the Metabase Sample Database.",
+        "model": "gpt-4o",
+        "video": "./static/videos/d57298f3-8191-4cec-9e63-ce1a90b0a2a2.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_38 = (1478, 176)\npyautogui.click(index_38)\n\n## Action 2\nindex_132 = (1395, 273)\npyautogui.click(index_132)\n\n## Action 3\nindex_35 = (389, 183)\npyautogui.click(index_35)\n\n## Action 4\nindex_56 = (180, 403)\npyautogui.click(index_56)\n\n## Action 5\nindex_87 = (959, 592)\npyautogui.click(index_87)\n\n## Action 6\nindex_40 = (655, 590)\nindex_44 = (1040, 651)\npyautogui.click(index_40)\npyautogui.write(\"Sample Database\")\npyautogui.click(index_44)\n\n## Action 7\nindex_55 = (224, 421)\npyautogui.click(index_55)\n\n## Action 8\ntime.sleep(5)\n\n## Action 9\nindex_56 = (180, 403)\npyautogui.click(index_56)\n\n## Action 10\nindex_87 = (959, 592)\npyautogui.click(index_87)\n\n## Action 11\nindex_40 = (655, 590)\nindex_45 = (1040, 651)\npyautogui.click(index_40)\npyautogui.typewrite(\"Sample Database\")\ntime.sleep(1)\npyautogui.click(index_45)\n\n## Action 12\nDONE"
+    },
+    {
+        "id": "d71943f6-8ee1-4836-9536-fd0e3436cec4",
+        "domain": "Metabase",
+        "tags": [
+            "abstract",
+            "gui",
+            "medium"
+        ],
+        "instruction": "Please turn off JSON unfolding for the database named PostgresData.",
+        "model": "gpt-4o",
+        "video": "./static/videos/d71943f6-8ee1-4836-9536-fd0e3436cec4.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_38 = (1478, 176)\npyautogui.click(index_38)\n\n## Action 2\nindex_142 = (1395, 273)\npyautogui.click(index_142)\n\n## Action 3\nindex_35 = (389, 183)\npyautogui.click(index_35)\n\n## Action 4\nindex_56 = (169, 403)\npyautogui.click(index_56)\n\n## Action 5\npyautogui.scroll(-500)\n\n## Action 6\nindex_78 = (284, 790)\npyautogui.click(index_78)\n\n## Action 7\nindex_84 = (791, 834)\npyautogui.click(index_84)\n\n## Action 8\nindex_82 = (476, 866)\npyautogui.click(index_82)\n\n## Action 9\npyautogui.scroll(-500)  # Scroll down\n\n## Action 10\nindex_76 = (256, 840)\npyautogui.click(index_76)\n\n## Action 11\npyautogui.scroll(-500)  # Scroll down more to reveal the options\n\n## Action 12\npyautogui.scroll(-500)  # Scroll down further\n\n## Action 13\npyautogui.scroll(-500)  # Scroll down further\n\n## Action 14\nindex_76 = (256, 840)\npyautogui.click(index_76)\n\n## Action 15\nindex_76 = (256, 840)\npyautogui.click(index_76)\n\nExceeded the maximum number of steps. Forced to stop!"
+    },
+    {
+        "id": "6749d85d-b57c-4f27-9b2d-8c0d12658cf2",
+        "domain": "Superset",
+        "tags": [
+            "abstract",
+            "gui",
+            "easy"
+        ],
+        "instruction": "I would like to view my 'Statistics' dashboard with both the top navigation and title hidden. Additionally, please render the dashboard without the filter bar. Show me it!",
+        "model": "gpt-4o",
+        "video": "./static/videos/6749d85d-b57c-4f27-9b2d-8c0d12658cf2.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_72 = (167, 492)\npyautogui.click(index_72)\ntime.sleep(2)\n\n## Action 2\nindex_22 = (772, 127)\nlocalhost:8088/superset/dashboard/10/?native_filters_key=sCC4RsjcpsebVkO0EigdyKzkHeAa0DXQxmmDkEmMXmca-wgVp_dPse46bSHMmb04\n\n[Exec Error]: File \"<string>\", line 2\n    localhost:8088/superset/dashboard/10/?native_filters_key=sCC4RsjcpsebVkO0EigdyKzkHeAa0DXQxmmDkEmMXmca-wgVp_dPse46bSHMmb04\n                                         ^\nSyntaxError: invalid syntax\n\n## Action 2\nindex_22 = (772, 127)\nlocalhost:8088/superset/dashboard/10/?standalone=2&show_filters=0\n\n[Exec Error]: File \"<string>\", line 2\n    localhost:8088/superset/dashboard/10/?standalone=2&show_filters=0\n                                         ^\nSyntaxError: invalid syntax\n\n## Action 2\nindex_22 = (772, 127)\npyautogui.click(index_22)\ntime.sleep(1)\npyautogui.hotkey('ctrl', 'a')\ntime.sleep(0.5)\npyautogui.press('backspace')\ntime.sleep(0.5)\npyautogui.typewrite('localhost:8088/superset/dashboard/10/?standalone=2&show_filters=0')\ntime.sleep(0.5)\npyautogui.press('enter')\n\n## Action 3\nindex_22 = (772, 127)\npyautogui.click(index_22)\ntime.sleep(1)\npyautogui.press('enter')\n\n## Action 4\nindex_22 = (772, 127)\npyautogui.click(index_22)\ntime.sleep(1)\npyautogui.press('enter')\n\n## Action 5\nindex_22 = (772, 127)\npyautogui.click(index_22)\ntime.sleep(1)\npyautogui.press('enter')\n\n## Action 6\nindex_22 = (772, 127)\npyautogui.click(index_22)  # Click the address bar\ntime.sleep(1)\npyautogui.press('enter')  # Press Enter to reload the page with the current URL\n\n## Action 7\nindex_22 = (772, 127)\npyautogui.click(index_22)  # Click the address bar\ntime.sleep(1)\npyautogui.press('enter')  # Press Enter to reload the page with the current URL\n\n## Action 8\nindex_22 = (772, 127)\npyautogui.click(index_22)  # Click the address bar to focus on it\ntime.sleep(1)\npyautogui.press('enter')  # Press Enter to reload the page\n\n## Action 9\nindex_20 = (164, 127)\npyautogui.click(index_20)  # Click the reload button\ntime.sleep(2)  # Wait for the page to reload\n\n## Action 10\nindex_22 = (772, 127)\npyautogui.click(index_22)  # Click the address bar to focus on it\ntime.sleep(1)\npyautogui.press('enter')  # Press Enter to reload the page\n\n## Action 11\nindex_20 = (164, 127)\npyautogui.click(index_20)  # Click the reload button\ntime.sleep(2)  # Wait for the page to reload\n\n## Action 12\nindex_22 = (772, 127)\npyautogui.click(index_22)  # Click the address bar to focus on it\ntime.sleep(1)\npyautogui.press('enter')  # Press Enter to reload the page\n\n## Action 13\nindex_22 = (772, 127)\npyautogui.click(index_22)  # Click the address bar to focus on it\ntime.sleep(1)\npyautogui.press('enter')  # Press Enter to reload the page\n\n## Action 14\nindex_22 = (772, 127)\npyautogui.click(index_22)  # Click the address bar to focus on it\ntime.sleep(1)\npyautogui.press('enter')  # Press Enter to reload the page\n\n## Action 15\nindex_22 = (772, 127)\npyautogui.click(index_22)  # Click the address bar to focus on it\ntime.sleep(1)\npyautogui.press('enter')  # Press Enter to reload the page\n\nExceeded the maximum number of steps. Forced to stop!"
+    },
+    {
+        "id": "fc08281a-ae88-436e-845f-2260ff49fe94",
+        "domain": "Superset",
+        "tags": [
+            "abstract",
+            "gui",
+            "easy"
+        ],
+        "instruction": "I don't need to use the chart Mychart, delete it right now.",
+        "model": "gpt-4o",
+        "video": "./static/videos/fc08281a-ae88-436e-845f-2260ff49fe94.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_120 = (401, 733)\npyautogui.click(index_120)\n\n## Action 2\nindex_148 = (433, 770)\npyautogui.click(index_148)\n\n## Action 3\nindex_166 = (649, 419)\npyautogui.click(index_166)\ntime.sleep(0.5)\npyautogui.typewrite(\"DELETE\")\n\n## Action 4\nindex_156 = (1003, 484)\npyautogui.click(index_156)\n\n## Action 5\nDONE"
+    },
+    {
+        "id": "33c8ce09-de8b-4432-8308-603b98513fdc",
+        "domain": "Airflow",
+        "tags": [
+            "abstract",
+            "gui",
+            "easy"
+        ],
+        "instruction": "I am using Astronomer to deploy Airflow. Show me the first DAG project in graph view. I need to check it now.",
+        "model": "gpt-4o",
+        "video": "./static/videos/33c8ce09-de8b-4432-8308-603b98513fdc.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_93 = (195, 478)\npyautogui.click(index_93)\n\n## Action 2\nindex_73 = (209, 406)\npyautogui.click(index_73)\n\n## Action 3\nindex_74 = (209, 406)\npyautogui.click(index_74)\n\n## Action 4\nindex_74 = (219, 405)\npyautogui.click(index_74)\n\n## Action 5\nDONE"
+    },
+    {
+        "id": "699e0c0a-3fdc-4c10-ad9f-c4c9d7a9947b",
+        "domain": "Airflow",
+        "tags": [
+            "abstract",
+            "cli-gui",
+            "easy"
+        ],
+        "instruction": "I am using Astronomer to place Airflow. Could you create an empty airflow project in current directory for me and launch the project on local server at port 8002.",
+        "model": "gpt-4o",
+        "video": "./static/videos/699e0c0a-3fdc-4c10-ad9f-c4c9d7a9947b.mp4",
+        "status": "success",
+        "actions": "## Action 1\npyautogui.write('astro dev init')\npyautogui.press('enter')\ntime.sleep(2)\n\n## Action 2\npyautogui.press('enter')\n\n## Action 3\npyautogui.press('enter')\n\n## Action 4\npyautogui.write('astro dev init')\npyautogui.press('enter')\ntime.sleep(2)\npyautogui.write('y')\npyautogui.press('enter')\n\n## Action 5\npyautogui.write('astro config set webserver.port 8002')\npyautogui.press('enter')\ntime.sleep(2)\npyautogui.write('astro dev start')\npyautogui.press('enter')\n\n## Action 6\nindex_3 = (35, 65)\npyautogui.click(index_3)\ntime.sleep(2)\npyautogui.write('http://localhost:8002')\npyautogui.press('enter')\n\n## Action 7\nindex_26 = (772, 127)\npyautogui.click(index_26)\npyautogui.write('http://localhost:8002')\npyautogui.press('enter')\n\n## Action 8\nindex_55 = (802, 420)\nindex_57 = (513, 446)\nindex_60 = (783, 531)\n# Enter username\npyautogui.click(index_55)\npyautogui.write('admin')\ntime.sleep(1)\n\n# Enter password\npyautogui.click(index_57)\npyautogui.write('admin')\ntime.sleep(1)\n\n# Click on the \"Sign In\" button\npyautogui.click(index_60)\n\n## Action 9\nDONE"
+    },
+    {
+        "id": "57a13efe-c008-4bc9-8959-36276115da0b",
+        "domain": "Airflow",
+        "tags": [
+            "abstract",
+            "cli-gui",
+            "easy"
+        ],
+        "instruction": "I am using Astronomer to deploy Airflow. Help me trigger the DAG workFlow_Echo by airflow in graph view.",
+        "model": "gpt-4o",
+        "video": "./static/videos/57a13efe-c008-4bc9-8959-36276115da0b.mp4",
+        "status": "success",
+        "actions": "## Action 1\nindex_152 = (182, 532)\npyautogui.click(index_152)\n\n## Action 2\nindex_75 = (209, 406)\npyautogui.click(index_75)\n\n## Action 3\nindex_93 = (1432, 403)\npyautogui.click(index_93)\n\n## Action 4\nindex_65 = (1460, 404)\npyautogui.click(index_65)\n\n## Action 4\nDONE"
     }
 ]
