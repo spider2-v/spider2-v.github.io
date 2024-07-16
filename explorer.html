@@ -17,14 +17,6 @@
             height: 50vh;
             overflow-y: scroll;
         }
-        pre {
-            max-height: 500px; /* Adjust as needed */
-            overflow: auto;
-        }
-
-        iframe {
-            max-width: 100%;
-        }
 
         .gpt_icon {
             vertical-align: middle;
@@ -128,27 +120,8 @@
         }
         .highlight-quote-content {
             font-style: italic; /* Italic font style for content */
-            max-height: 100px; /* Max height for the content */
+            max-height: 180px; /* Max height for the content */
             overflow: auto; /* Add scrollbars if needed */
-        }
-        /* .video-container { */
-            /* width: 100%; */
-            /* margin: 0 auto; */
-            /* overflow: hidden; */
-            /* position: relative; */
-            /* display: block; */
-            /* flex-direction: column; */
-            /* gap: 10px; Optional: space between images */
-        /* } */
-        video {
-            /* flex: 1; */
-            width: 100%;
-            height: auto;
-            display: block;
-            /* padding: 0; */
-            margin: 0 auto;
-            /* border: none; */
-            /* object-fit: contain; */
         }
     </style>
 </head>
@@ -213,16 +186,13 @@
                                     <div class="column has-text-centered is-vcentered"
                                         style="font-weight: 300; font-size: 1.1em" id="videoPrompt">&#x2020;
                                         Select a task on the left panel to view the recording.</div>
-                                    <!-- <div class="video-container"> -->
-                                        <video controls muted loop autoplay id="recordingViewer" src="./static/videos/88df855a-eab8-4732-bb63-9c907b806cf1.mp4">
-                                        </video>
-                                    <!-- </div> -->
+                                    <video controls muted loop autoplay id="recordingViewer" src="" style="display: block; width: 100%; margin: 0 auto; object-fit: contain; object-position: center;">
+                                    </video>
                                 </div>
 
                                 <div class="box">
                                     <h5>Actions</h5>
-                                    <div id="action-text">
-                                    <pre class="line-numbers"><code class="language-python">## Action 1
+                                    <pre class="line-numbers" data-language="python" style="max-width: 100%; max-height: 500px; overflow: auto; white-space: pre-wrap;"><code class="language-python" id="action-text">## Action 1
 action1
 
 ## Aciton 2
@@ -284,7 +254,7 @@ action3
                                         }
                                         document.getElementById('taskid-text').innerHTML = taskId;
                                         document.getElementById('status-flag').innerHTML = `<b>Status:</b> <span class="tag-${taskData.status}">${taskData.status}</span>`;
-                                        document.getElementById('instruction-text').innerHTML = taskData.instruction;
+                                        document.getElementById('instruction-text').innerText = taskData.instruction;
                                         document.getElementById('tag-list').innerHTML = `<b>Tags:</b> ${taskData.tags.map(tag => {
                                             if (tag === 'cli-gui') {
                                                 return `<span class="tag-cli-gui">cli+gui</span>`;
@@ -294,19 +264,17 @@ action3
                                             }).join(' ')}`;
                                         
                                         // action code block
-                                        document.getElementById('action-text').innerHTML = `<pre class="line-numbers"><code class="language-python">` + taskData.actions + `</code></pre>`;
+                                        document.getElementById('action-text').innerHTML = taskData.actions;
                                         Prism.highlightAll();
                                         
                                         // adjuest the video prompt according to agents or models
                                         document.getElementById('videoPrompt').innerHTML = `&#x2020;
                                         Video recordings and action trajectory are created by &thinsp;  
                                         <a href="https://openai.com/index/hello-gpt-4o/">OpenAI GPT-4o</a>
-                                        <img class="gpt_icon" src="static/images/chatgpt.png" width="25" height="25">`;
+                                        <img class="gpt_icon" src="static/images/chatgpt.png" width="20" height="20">`;
 
                                         // Update the recording viewer
-                                        const videoElement = document.getElementById('recordingViewer');
-                                        videoElement.src = `static/videos/${taskData.id}.mp4`;
-                                        videoElement.load();
+                                        document.getElementById('recordingViewer').src = `./static/videos/${taskData.id}.mp4`;
                                     });
                             });
                             listItem.addEventListener("click", function () {
